@@ -4,3 +4,22 @@ a.out
 
 .*.sw[op]
 .vscode/settings.json
+
+xise/*.gise
+xise/*_summary.html
+xise/_ngo/
+xise/_xmsgs/
+xise/*.bld
+xise/*.cmd_log
+xise/*.lso
+xise/*.ngc
+xise/*.ngr
+xise/*.prj
+xise/*.stx
+xise/*.syr
+xise/*.xst
+xise/*.html
+xise/*.xrpt
+xise/*.xrpt
+xise/*.xml
+xise/xst/

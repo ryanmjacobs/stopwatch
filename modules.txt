@@ -6,6 +6,8 @@ top.v:
   // two control buttons
   reg btn_set_pause
   reg btn_reset
+  debounce db1(btnCenter, btn_set_pause) 
+  debounce db1(btnRight,  btn_reset) 
 
   // slider switches
   reg sel = sw[1:0]

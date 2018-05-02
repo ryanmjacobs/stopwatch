@@ -1,0 +1,17 @@
+debounce.v - debounce a button and store it in a register
+display.v  - render a register's value (seconds) on the seven segment display
+top.v      - main logic
+
+top.v:
+  // two control buttons
+  reg btn_set_pause
+  reg btn_reset
+
+  // slider switches
+  reg sel = sw[1:0]
+  reg num = sw[7:4]
+  reg adj = sw[8]
+
+  reg count // stopwatch count measured in seconds
+
+  display dsp(count)

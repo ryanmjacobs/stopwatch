@@ -7,20 +7,24 @@ module debounce(input clk, input src, output dst);
     reg  [1:0] state;
     reg [23:0] count;
 
+    initial begin
+        dst   <= src;
+        state <= 0;
+        count <= 0;
+    end
+
     always @(posedge clk) begin
         // basic FIFO
         state[0] <= src;
         state[1] <= state[0];
 
-        count <= count + 1;
+        count <= count+1;
 
-        if (dst == state[1])
+        if (state[0] != state[1])
             count <= 0;
         else begin
-            count <= count+1;
-
-            if (count > threshold) begin
-                dst <= ~dst;
+            if (count >= threshold) begin
+                dst <= state[0];
                 count <= 0;
             end
         end

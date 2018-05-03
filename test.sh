@@ -30,6 +30,6 @@ else
             exit 1
         fi
 
-        iverilog -o tmp.vvp src/*.v "$tb" && vvp tmp.vvp
+        iverilog -o tmp.vvp src/*.v "$fname" && vvp tmp.vvp
     done
 fi

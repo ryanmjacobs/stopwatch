@@ -12,7 +12,7 @@ module debounce(input clk, input src, output dst);
         state[0] <= src;
         state[1] <= state[0];
 
-        count <= count + 1'b1;
+        count <= count + 1;
 
         if (dst == state[1])
             count <= 0;

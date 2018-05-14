@@ -4,6 +4,7 @@ module counter(
     input rst,
     input paused,
 
+    input adj,
     input [2:0] adj_sel,
     input [3:0] adj_val,
 
@@ -12,24 +13,23 @@ module counter(
     output reg [4:0] sec_l = 0,
     output reg [4:0] sec_r = 0
 );
-    // adjust mode
-	 /*
-    always @(adj_sel) begin
-        case (adj_sel)
-            0: min_l = adj_val;
-            1: min_r = adj_val;
-            2: sec_l = adj_val;
-            3: sec_r = adj_val;
-        endcase
-    end
-	 */
-
+	 display display(clk, out1, adj, seg, an);
+	 
     always @(posedge clk) begin
+	     // reset
         if (rst) begin
             min_l = 0;
             min_r = 0;
             sec_l = 0;
             sec_r = 0;
+		  end else if (adj_sel) begin
+		    // adjust
+		    case (adj_sel)
+            0: min_l = adj_val;
+            1: min_r = adj_val;
+            2: sec_l = adj_val;
+            3: sec_r = adj_val;
+          endcase
         end else if (out1 == 0 && !paused) begin
             sec_r = sec_r + 1;
 

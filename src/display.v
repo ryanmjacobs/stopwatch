@@ -2,11 +2,6 @@ module display(
     input clk,
     input [26:0] out1, // 1Hz blink clock
     input adj,
-
-    input [4:0] min_l,
-    input [4:0] min_r,
-    input [4:0] sec_l,
-    input [4:0] sec_r,
 	 
 	 output reg [6:0] seg,
 	 output reg [3:0] an

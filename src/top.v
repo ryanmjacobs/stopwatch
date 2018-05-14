@@ -25,23 +25,10 @@ module top(input clk, output [12:0] seconds);
     // pause button
     assign paused = (!adj && btn_set_pause);
 
-    // stopwatch count measured in seconds
-    // max. count = "99:99"
-    //            = 99 + 99*60
-    //            = 6039
-    // log2(6039) = ~12.6
-    //
-    // -> 13 bits required
-    reg [20:0] ms = 0;
-    reg [12:0] seconds = 0;
-
-    // count seconds
-    always @(posedge clk) begin
-        if (out1 == 0 && !adj && !paused) begin
-            seconds <= seconds + 1'b1;
-            $display(seconds);
-        end
-    end
-    
-    display display(clk, seconds);
+    wire [4:0] min_l = 0;
+    wire [4:0] min_r = 0;
+    wire [4:0] sec_l = 0;
+    wire [4:0] sec_r = 0;
+    counter counter(clk, out1, paused, min_l, min_r, sec_l, sec_r);
+    display display(clk, min_l, min_r, sec_l, sec_r);
 endmodule

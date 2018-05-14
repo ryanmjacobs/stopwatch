@@ -4,11 +4,23 @@ module counter(
     input rst,
     input paused,
 
+    input [2:0] adj_sel,
+    input [4:0] adj_val,
+
     output reg [4:0] min_l = 0,
     output reg [4:0] min_r = 0,
     output reg [4:0] sec_l = 0,
     output reg [4:0] sec_r = 0
 );
+    // adjust mode
+    always @(adj_sel) begin
+        case (adj_sel)
+            0: min_l = adj_val;
+            1: min_r = adj_val;
+            2: sec_l = adj_val;
+            3: sec_r = adj_val;
+        endcase
+    end
 
     always @(posedge clk) begin
         if (rst) begin
@@ -42,5 +54,4 @@ module counter(
             //       spec doesn't define behavior
         end
     end
-
 endmodule

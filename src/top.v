@@ -25,10 +25,22 @@ module top(input clk, output [12:0] seconds);
     // pause button
     assign paused = (!adj && btn_set_pause);
 
+    // adjust registers
+    reg [2:0] adj_sel;
+    reg [4:0] adj_val;
+
     wire [4:0] min_l = 0;
     wire [4:0] min_r = 0;
     wire [4:0] sec_l = 0;
     wire [4:0] sec_r = 0;
-    counter counter(clk, out1, btn_reset, paused, min_l, min_r, sec_l, sec_r);
+    counter counter(clk, out1, btn_reset, paused,
+                    adj_sel, adj_val,
+                    min_l, min_r, sec_l, sec_r);
     display display(clk, min_l, min_r, sec_l, sec_r);
+
+    // adjust mode
+    always @(clk) begin
+        if (adj) begin
+        end
+    end
 endmodule

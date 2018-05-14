@@ -1,5 +1,9 @@
-// count is measured in seconds
-module display(input clk,
+module display(
+    input clk,
+
+    input adj,
+    input out1, // 1Hz blink clock
+
     input [4:0] min_l,
     input [4:0] min_r,
     input [4:0] sec_l,
@@ -17,6 +21,17 @@ module display(input clk,
     reg [3:0] panel = 0;
     always @(posedge clk) begin
         panel = (panel + 1'b1) % 4;
+        // TODO: light panel
+    end
+
+    always @(clk) begin
+        if (out1 == 0 && adj) begin
+            // toggle panel
+        end
+
+        if (!adj) begin
+            // ensure panel is on
+        end
     end
 endmodule
 

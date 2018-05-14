@@ -40,8 +40,8 @@ module top(input clk, output [12:0] seconds);
                     min_l, min_r, sec_l, sec_r);
     display display(clk, min_l, min_r, sec_l, sec_r);
 
-    // adjust mode
-    always @(clk) begin
+    // adjust mode blink
+    always @(out1) begin
         if (adj) begin
         end
     end

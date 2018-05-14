@@ -12,6 +12,10 @@ module top_tb;
         $dumpvars(0, clk, seconds);
     end
 
+    always begin
+        #4000 $finish;
+    end
+
     // run testbench for 2 seconds
     always begin
         #5

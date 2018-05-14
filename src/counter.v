@@ -1,6 +1,7 @@
 module counter(
     input clk,
     input [26:0] out1,
+    input rst,
     input paused,
 
     output reg [4:0] min_l = 0,
@@ -10,7 +11,12 @@ module counter(
 );
 
     always @(posedge clk) begin
-        if (out1 == 0 && !paused) begin
+        if (rst) begin
+            min_l <= 0;
+            min_r <= 0;
+            sec_l <= 0;
+            sec_r <= 0;
+        end else if (out1 == 0 && !paused) begin
             sec_r = sec_r + 1;
 
             // seconds, ones overflow

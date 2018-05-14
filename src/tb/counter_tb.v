@@ -1,5 +1,6 @@
 module counter_tb;
     reg clk = 0;
+    reg rst = 0;
     reg [26:0] out1 = 0;
     reg paused = 0;
 
@@ -7,12 +8,16 @@ module counter_tb;
     wire [4:0] min_r;
     wire [4:0] sec_l;
     wire [4:0] sec_r;
-    counter counter(clk, out1, paused, min_l, min_r, sec_l, sec_r);
+    counter counter(clk, out1, rst, paused, min_l, min_r, sec_l, sec_r);
 
     initial begin
         $display("--- counter tb ---");
         $monitor("%0d%0d%0d%0d", min_l, min_r, sec_l, sec_r);
-        #5999 $finish;
+
+        #10 rst = 1;
+        #10 rst = 0;
+
+        #200 $finish;
     end
 
     always begin

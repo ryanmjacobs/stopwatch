@@ -24,14 +24,11 @@ module top(input clk, output [12:0] seconds);
     // log2(6039) = ~12.6
     //
     // -> 13 bits required
-    reg [9:0]  ms = 0;
+    reg [20:0] ms = 0;
     reg [12:0] seconds = 0;
 
-    always @(posedge out1) begin
-        ms = ms + 1'b1;
-
-        if (ms >= 1000) begin
-            ms = 0;
+    always @(posedge clk) begin
+        if (out1 == 0) begin
             seconds = seconds + 1'b1;
             $display(seconds);
         end

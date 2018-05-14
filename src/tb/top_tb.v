@@ -1,3 +1,6 @@
+// 100 MHz scale
+`timescale 10ns/10ns
+
 module top_tb;
     reg clk = 0;
     wire [12:0] seconds;
@@ -6,17 +9,17 @@ module top_tb;
     initial begin
         $display("--- top tb ---");
         $dumpfile("top.vcd");
-        $dumpvars(0, clk);
+        $dumpvars(0, clk, seconds);
     end
 
     // run testbench for 2 seconds
     always begin
-        #100
+        #5
         if (seconds >= 2)
             $finish;
     end
 
     always begin
-        #10 clk = ~clk;
+        #1 clk = ~clk;
     end
 endmodule

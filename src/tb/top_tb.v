@@ -1,5 +1,12 @@
 module top_tb;
+    reg clk = 0;
+
     initial begin
-        #1 $display("top tb");
+        $display("top tb");
+        #1000000 $finish;
+    end
+
+    always begin
+        #1 clk = ~clk;
     end
 endmodule

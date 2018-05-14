@@ -18,10 +18,16 @@ module top;
   //reg adj = sw[8];
     
     // stopwatch count measured in seconds
-    reg count;
-
+    // max. count = "99:99"
+    //            = 99 + 99*60
+    //            = 6039
+    // log2(6039) = ~12.6
+    //
+    // -> 13 bits required
+    reg [12:0] seconds;
 
     always @(posedge clk) begin
+        seconds = seconds + 1'b1;
     end
     
   //reg seg, an;

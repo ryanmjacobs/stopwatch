@@ -1,28 +1,9 @@
 // count is measured in seconds
-module display(input clk, input [12:0] count,
-    output [3:0] d0,
-    output [3:0] d1,
-    output [3:0] d2,
-    output [3:0] d3,
-    output [3:0] s0,
-    output [3:0] s1,
-    output [3:0] s2,
-    output [3:0] s3
-);
+module display(input clk, input [12:0] count);
     // partitioned values
     reg [6:0] sec;
     reg [6:0] min;
     reg [4:0] digits [0:3];
-
-    assign d0 = digits[0];
-    assign d1 = digits[1];
-    assign d2 = digits[2];
-    assign d3 = digits[3];
-
-    assign s0 = segments[0];
-    assign s1 = segments[1];
-    assign s2 = segments[2];
-    assign s3 = segments[3];
 
     always @(count) begin
         sec = count % 60;
@@ -46,11 +27,10 @@ module display(input clk, input [12:0] count,
         segment segment0(digits[i], segments[i]);
     end
 
-    // selected panel to render
-    reg [3:0] panel;
-
+    // render a different panel on each clock tick
+    reg [3:0] panel = 0;
     always @(posedge clk) begin
-        panel = 1'b1 << (clk % 4);
+        panel = (panel + 1'b1) % 4;
     end
 endmodule
 
@@ -60,7 +40,6 @@ module segment(value, storage);
 
     // lookup bit-value for 7-segment digit
     always @(value) begin
-        $display(value);
         case (value)
             0: storage = 7'b1000000;
             1: storage = 7'b1111001;

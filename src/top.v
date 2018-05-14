@@ -38,11 +38,5 @@ module top(input clk, output [12:0] seconds);
     counter counter(clk, out1, btn_reset, paused,
                     adj_sel, num,
                     min_l, min_r, sec_l, sec_r);
-    display display(clk, min_l, min_r, sec_l, sec_r);
-
-    // adjust mode blink
-    always @(out1) begin
-        if (adj) begin
-        end
-    end
+    display display(clk, adj, min_l, min_r, sec_l, sec_r);
 endmodule

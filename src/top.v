@@ -9,14 +9,22 @@ module top(input clk, output [12:0] seconds);
     // two control buttons
     wire btn_reset;
     wire btn_set_pause;
+    reg btnRight = 0; // temp
+    reg btnCenter = 0; // temp
     debounce db1(clk, btnRight,  btn_reset);
     debounce db2(clk, btnCenter, btn_set_pause);
     
     // slider switches
-  //reg sel = sw[1:0];
-  //reg num = sw[7:4];
-  //reg adj = sw[8];
-    
+  //reg [1:0] sel = sw[1:0]; // selects the digit position to adjust
+  //reg [3:0] num = sw[7:4]; // represents the binary value to set
+  //reg       adj = sw[8];   // sets stopwatch to adjust mode
+    reg [1:0] sel = 0;
+    reg [3:0] num = 0;
+    reg       adj = 0;
+
+    // pause button
+    assign paused = (!adj && btn_set_pause);
+
     // stopwatch count measured in seconds
     // max. count = "99:99"
     //            = 99 + 99*60
@@ -27,13 +35,13 @@ module top(input clk, output [12:0] seconds);
     reg [20:0] ms = 0;
     reg [12:0] seconds = 0;
 
+    // count seconds
     always @(posedge clk) begin
-        if (out1 == 0) begin
+        if (out1 == 0 && !adj && !paused) begin
             seconds <= seconds + 1'b1;
             $display(seconds);
         end
     end
     
-    reg seg, an;
-  //display display(seconds, seg, an):
+    display display(clk, seconds);
 endmodule

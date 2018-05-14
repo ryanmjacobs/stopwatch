@@ -5,7 +5,7 @@ module counter(
     input paused,
 
     input [2:0] adj_sel,
-    input [4:0] adj_val,
+    input [3:0] adj_val,
 
     output reg [4:0] min_l = 0,
     output reg [4:0] min_r = 0,

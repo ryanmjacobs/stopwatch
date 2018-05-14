@@ -6,6 +6,8 @@ module debounce_tb;
     debounce db(clk, src, dst);
 
     initial begin
+        $display("--- debounce tb ---");
+
         clk <= 0;
         src <= 0;
 

@@ -27,15 +27,12 @@ module display(input clk, input [12:0] count);
     segment segment2(sec_l, segments[2]); // sec left
     segment segment3(sec_r, segments[3]); // sec right
 
-    // index for which segment to render
-    reg [1:0] idx;
+    // selected panel to render
+    reg [3:0] panel;
 
     always @(posedge clk) begin
-        idx = clk % 4;
+        panel = 1'b1 << (clk % 4);
     end
-
-  //reg [6:0] seg;
-  //output [3:0] an;
 endmodule
 
 module segment(value, storage);

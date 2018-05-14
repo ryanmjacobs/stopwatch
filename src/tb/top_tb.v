@@ -1,16 +1,19 @@
-`timescale 1ns/1ps
 module top_tb;
     reg clk = 0;
-  //top top(clk);
+    wire [12:0] seconds;
+    top top(clk, seconds);
 
     initial begin
+        $display("--- top tb ---");
         $dumpfile("top.vcd");
         $dumpvars(0, clk);
     end
 
-    initial begin
-        $display("top tb");
-        #1000000 $finish;
+    // run testbench for 2 seconds
+    always begin
+        #100
+        if (seconds >= 2)
+            $finish;
     end
 
     always begin

@@ -1,9 +1,9 @@
-module top(input clk);
+module top(input clk, output [12:0] seconds);
     reg rst = 0;
-	wire [26:0] out1;    // 1Hz Clock
-	wire [25:0] out2;    // 2Hz Clock
-	wire [17:0] out7seg; // 380Hz Clock
-	wire [25:0] outadj;  // 5Hz Clock
+    wire [26:0] out1;    // 1Hz Clock
+    wire [25:0] out2;    // 2Hz Clock
+    wire [17:0] out7seg; // 380Hz Clock
+    wire [25:0] outadj;  // 5Hz Clock
     clkdiv clkdiv(clk, rst, out1, out2, out7seg, outadj);
 
     // two control buttons
@@ -24,10 +24,17 @@ module top(input clk);
     // log2(6039) = ~12.6
     //
     // -> 13 bits required
-    reg [12:0] seconds;
+    reg [9:0]  ms = 0;
+    reg [12:0] seconds = 0;
 
-    always @(posedge clk) begin
-        seconds = seconds + 1'b1;
+    always @(posedge out1) begin
+        ms = ms + 1'b1;
+
+        if (ms >= 1000) begin
+            ms = 0;
+            seconds = seconds + 1'b1;
+            $display(seconds);
+        end
     end
     
   //reg seg, an;

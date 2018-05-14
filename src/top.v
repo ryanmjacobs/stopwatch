@@ -1,4 +1,4 @@
-module top;
+module top(input clk);
     reg rst = 0;
 	wire [26:0] out1;    // 1Hz Clock
 	wire [25:0] out2;    // 2Hz Clock

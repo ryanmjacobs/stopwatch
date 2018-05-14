@@ -28,9 +28,7 @@ module top(input clk, output [12:0] seconds);
     // adjust registers
     reg [2:0] adj_sel;
     reg [4:0] adj_val = 5;
-
-    always @(adj)
-        adj_sel <= adj ? sel : 5;
+    always @(adj) adj_sel <= adj ? sel : 5;
 
     wire [4:0] min_l = 0;
     wire [4:0] min_r = 0;

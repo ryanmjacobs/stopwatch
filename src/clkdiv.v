@@ -27,17 +27,15 @@ module clkdiv(
 	 output reg [25:0] outadj=0   // 5Hz Clock
     );
 	 
-    /*
 	localparam out1div = 100000000;
 	localparam out2div = 50000000;
 	localparam out7div = 262144;
 	localparam outadjdiv = 20000000;
-    */
     // sped up timescale for simulation
-	localparam out1div = 10000;
-	localparam out2div = 5000;
-	localparam out7div = 26;
-	localparam outadjdiv = 2000;
+	//localparam out1div = 10000;
+	//localparam out2div = 5000;
+	//localparam out7div = 26;
+	//localparam outadjdiv = 2000;
 
 	always @ (posedge clk) 
 		begin

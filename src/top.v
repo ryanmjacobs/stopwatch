@@ -1,4 +1,7 @@
-module top(input clk, output [12:0] seconds);
+module top(
+	input clk, output [12:0] seconds,
+	input [7:0] sw, input btnl, input btnr
+);
     reg rst = 0;
     wire [26:0] out1;    // 1Hz Clock
     wire [25:0] out2;    // 2Hz Clock
@@ -11,16 +14,16 @@ module top(input clk, output [12:0] seconds);
     wire btn_set_pause;
     reg btnRight = 0; // temp
     reg btnCenter = 0; // temp
-    debounce db1(clk, btnRight,  btn_reset);
-    debounce db2(clk, btnCenter, btn_set_pause);
+    debounce db1(clk, btnl,  btn_reset);
+    debounce db2(clk, btnr, btn_set_pause);
     
     // slider switches
-  //reg [1:0] sel = sw[1:0]; // selects the digit position to adjust
-  //reg [3:0] num = sw[7:4]; // represents the binary value to set
-  //reg       adj = sw[8];   // sets stopwatch to adjust mode
-    reg [1:0] sel = 0;
-    reg [3:0] num = 0;
-    reg       adj = 0;
+    wire [1:0] sel = sw[1:0]; // selects the digit position to adjust
+    wire [3:0] num = sw[6:3]; // represents the binary value to set
+    wire       adj = sw[7];   // sets stopwatch to adjust mode
+    //reg [1:0] sel = 0;
+    //reg [3:0] num = 0;
+    //reg       adj = 0;
 
     // pause button
     wire paused;
@@ -38,5 +41,7 @@ module top(input clk, output [12:0] seconds);
     counter counter(clk, out1, btn_reset, paused,
                     adj_sel, num,
                     min_l, min_r, sec_l, sec_r);
-    display display(clk, out1, adj, min_l, min_r, sec_l, sec_r);
+    display display(clk, out1, adj,
+						  min_l, min_r, sec_l, sec_r,
+						  seg, an);
 endmodule

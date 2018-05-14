@@ -6,11 +6,14 @@ module display(
     input [4:0] min_l,
     input [4:0] min_r,
     input [4:0] sec_l,
-    input [4:0] sec_r
+    input [4:0] sec_r,
+	 
+	 output reg [6:0] seg,
+	 output reg [3:0] an
 );
     // calculate segment values
     // in this order: min_l, min_r, sec_l, sec_r
-    wire [3:0] segments [0:3];
+    wire [7:0] segments [0:3];
     segment segment0(min_l, segments[0]);
     segment segment1(min_r, segments[1]);
     segment segment2(sec_l, segments[2]);
@@ -20,7 +23,8 @@ module display(
     reg [3:0] panel = 0;
     always @(posedge clk) begin
         panel = (panel + 1'b1) % 4;
-        // TODO: light panel
+        an = 1 << panel;
+		  seg = segments[panel];
     end
 
     always @(clk) begin
@@ -36,7 +40,7 @@ endmodule
 
 module segment(value, storage);
     input [4:0] value;        // value to display, i.e. digits 0-9
-    output reg [3:0] storage; // storage register for the lookup table
+    output reg [7:0] storage; // storage register for the lookup table
 
     // lookup bit-value for 7-segment digit
     always @(value) begin

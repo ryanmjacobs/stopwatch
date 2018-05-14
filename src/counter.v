@@ -13,6 +13,7 @@ module counter(
     output reg [4:0] sec_r = 0
 );
     // adjust mode
+	 /*
     always @(adj_sel) begin
         case (adj_sel)
             0: min_l = adj_val;
@@ -21,13 +22,14 @@ module counter(
             3: sec_r = adj_val;
         endcase
     end
+	 */
 
     always @(posedge clk) begin
         if (rst) begin
-            min_l <= 0;
-            min_r <= 0;
-            sec_l <= 0;
-            sec_r <= 0;
+            min_l = 0;
+            min_r = 0;
+            sec_l = 0;
+            sec_r = 0;
         end else if (out1 == 0 && !paused) begin
             sec_r = sec_r + 1;
 

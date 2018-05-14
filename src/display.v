@@ -15,6 +15,7 @@ module display(input clk, input [12:0] count);
         sec_r = sec % 10;
         sec_l = (sec - sec_r) / 10;
 
+        // ditto
         min_r = min % 10;
         min_l = (min - min_r) / 10;
     end

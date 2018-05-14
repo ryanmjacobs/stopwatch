@@ -17,6 +17,6 @@ module top_tb;
     end
 
     always begin
-        #1 clk = ~clk;
+        #10 clk = ~clk;
     end
 endmodule

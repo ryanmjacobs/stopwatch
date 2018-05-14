@@ -21,10 +21,10 @@
 module clkdiv(
     input clk,
 	 input rst,
-	 output reg [26:0] out1, 	 // 1Hz Clock
-	 output reg [25:0] out2, 	 // 2Hz Clock
-	 output reg [17:0] out7seg, // 380Hz Clock
-	 output reg [25:0] outadj   // 5Hz Clock
+	 output reg [26:0] out1=0, 	  // 1Hz Clock
+	 output reg [25:0] out2=0, 	  // 2Hz Clock
+	 output reg [17:0] out7seg=0, // 380Hz Clock
+	 output reg [25:0] outadj=0   // 5Hz Clock
     );
 	 
 	localparam out1div = 100000000;

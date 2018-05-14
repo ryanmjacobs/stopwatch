@@ -29,11 +29,11 @@ module top(input clk, output [12:0] seconds);
 
     always @(posedge clk) begin
         if (out1 == 0) begin
-            seconds = seconds + 1'b1;
+            seconds <= seconds + 1'b1;
             $display(seconds);
         end
     end
     
-  //reg seg, an;
-  //display display(count, seg, an):
+    reg seg, an;
+  //display display(seconds, seg, an):
 endmodule

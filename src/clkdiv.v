@@ -33,7 +33,7 @@ module clkdiv(
 	localparam out7div = 262144;
 	localparam outadjdiv = 20000000;
     */
-    // sped up timescale for testing
+    // sped up timescale for simulation
 	localparam out1div = 10000;
 	localparam out2div = 5000;
 	localparam out7div = 26;

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\152\stopwatch\src\debounce.v" Line 20: Result of <arg fmt="%d" index="1">25</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">24</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\152\stopwatch\src\clkdiv.v" Line 59: Result of <arg fmt="%d" index="1">27</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">26</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\152\stopwatch\src\clkdiv.v" Line 60: Result of <arg fmt="%d" index="1">19</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">18</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\152\stopwatch\src\clkdiv.v" Line 61: Result of <arg fmt="%d" index="1">27</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">26</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\152\stopwatch\src\clkdiv.v" Line 65: Result of <arg fmt="%d" index="1">28</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">27</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\152\stopwatch\src\clkdiv.v" Line 67: Result of <arg fmt="%d" index="1">19</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">18</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\152\stopwatch\src\clkdiv.v" Line 68: Result of <arg fmt="%d" index="1">27</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">26</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\152\stopwatch\src\clkdiv.v" Line 72: Result of <arg fmt="%d" index="1">28</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">27</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\152\stopwatch\src\clkdiv.v" Line 73: Result of <arg fmt="%d" index="1">27</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">26</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\152\stopwatch\src\clkdiv.v" Line 75: Result of <arg fmt="%d" index="1">27</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">26</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\152\stopwatch\src\clkdiv.v" Line 79: Result of <arg fmt="%d" index="1">28</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">27</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\152\stopwatch\src\clkdiv.v" Line 80: Result of <arg fmt="%d" index="1">27</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">26</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\152\stopwatch\src\clkdiv.v" Line 81: Result of <arg fmt="%d" index="1">19</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">18</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\152\stopwatch\src\clkdiv.v" Line 86: Result of <arg fmt="%d" index="1">28</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">27</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\152\stopwatch\src\clkdiv.v" Line 87: Result of <arg fmt="%d" index="1">27</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">26</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\152\stopwatch\src\clkdiv.v" Line 88: Result of <arg fmt="%d" index="1">19</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">18</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\152\stopwatch\src\clkdiv.v" Line 89: Result of <arg fmt="%d" index="1">27</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">26</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\152\stopwatch\src\top.v" Line 18: Assignment to <arg fmt="%s" index="1">out2</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\152\stopwatch\src\display.v" Line 17: Assignment to <arg fmt="%s" index="1">segments</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\152\stopwatch\src\display.v" Line 18: Assignment to <arg fmt="%s" index="1">segments</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\152\stopwatch\src\display.v" Line 19: Assignment to <arg fmt="%s" index="1">segments</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\152\stopwatch\src\display.v" Line 20: Assignment to <arg fmt="%s" index="1">segments</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\152\stopwatch\src\counter.v" Line 38: Result of <arg fmt="%d" index="1">6</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">5</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\152\stopwatch\src\counter.v" Line 43: Result of <arg fmt="%d" index="1">6</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">5</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\152\stopwatch\src\counter.v" Line 50: Result of <arg fmt="%d" index="1">6</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">5</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\152\stopwatch\src\counter.v" Line 56: Result of <arg fmt="%d" index="1">6</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">5</arg>-bit target.
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\152\stopwatch\src\display.v</arg>&quot; line <arg fmt="%d" index="2">17</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">segment0</arg>&gt; of block &lt;<arg fmt="%s" index="4">segment</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">display</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\152\stopwatch\src\display.v</arg>&quot; line <arg fmt="%d" index="2">18</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">segment1</arg>&gt; of block &lt;<arg fmt="%s" index="4">segment</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">display</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\152\stopwatch\src\display.v</arg>&quot; line <arg fmt="%d" index="2">19</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">segment2</arg>&gt; of block &lt;<arg fmt="%s" index="4">segment</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">display</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\152\stopwatch\src\display.v</arg>&quot; line <arg fmt="%d" index="2">20</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">segment3</arg>&gt; of block &lt;<arg fmt="%s" index="4">segment</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">display</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">sw&lt;2:2&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\152\stopwatch\src\top.v</arg>&quot; line <arg fmt="%s" index="2">18</arg>: Output port &lt;<arg fmt="%s" index="3">out2</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">clkdiv</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\152\stopwatch\src\top.v</arg>&quot; line <arg fmt="%s" index="2">18</arg>: Output port &lt;<arg fmt="%s" index="3">out7seg</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">clkdiv</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\152\stopwatch\src\top.v</arg>&quot; line <arg fmt="%s" index="2">18</arg>: Output port &lt;<arg fmt="%s" index="3">outadj</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">clkdiv</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">out1</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">clk</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">adj</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\152\stopwatch\src\display.v</arg>&quot; line <arg fmt="%s" index="2">17</arg>: Output port &lt;<arg fmt="%s" index="3">storage</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">segment0</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\152\stopwatch\src\display.v</arg>&quot; line <arg fmt="%s" index="2">18</arg>: Output port &lt;<arg fmt="%s" index="3">storage</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">segment1</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\152\stopwatch\src\display.v</arg>&quot; line <arg fmt="%s" index="2">19</arg>: Output port &lt;<arg fmt="%s" index="3">storage</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">segment2</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\152\stopwatch\src\display.v</arg>&quot; line <arg fmt="%s" index="2">20</arg>: Output port &lt;<arg fmt="%s" index="3">storage</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">segment3</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="warning" file="Xst" num="1290" delta="old" >Hierarchical block &lt;<arg fmt="%s" index="1">db1</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">top</arg>&gt;.
+It will be removed from the design.
+</msg>
+
+<msg type="warning" file="Xst" num="1290" delta="old" >Hierarchical block &lt;<arg fmt="%s" index="1">db2</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">top</arg>&gt;.
+It will be removed from the design.
+</msg>
+
+<msg type="warning" file="Xst" num="1290" delta="old" >Hierarchical block &lt;<arg fmt="%s" index="1">clkdiv</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">top</arg>&gt;.
+It will be removed from the design.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">min_r_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">counter</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">min_r_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">counter</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">min_r_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">counter</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">min_r_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">counter</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">min_r_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">counter</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">sec_l_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">counter</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">sec_l_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">counter</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">sec_l_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">counter</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">sec_l_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">counter</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">sec_l_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">counter</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">sec_r_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">counter</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">sec_r_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">counter</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">sec_r_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">counter</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">sec_r_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">counter</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">sec_r_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">counter</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2973" delta="old" >All outputs of instance &lt;<arg fmt="%s" index="1">db1</arg>&gt; of block &lt;<arg fmt="%s" index="2">debounce</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2973" delta="old" >All outputs of instance &lt;<arg fmt="%s" index="1">db2</arg>&gt; of block &lt;<arg fmt="%s" index="2">debounce</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2973" delta="old" >All outputs of instance &lt;<arg fmt="%s" index="1">clkdiv</arg>&gt; of block &lt;<arg fmt="%s" index="2">clkdiv</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. Underlying logic will be removed.
+</msg>
+
+</messages>
+

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="error" file="PhysDesignRules" num="368" delta="old" >The signal &lt;<arg fmt="%s" index="1">an&lt;0&gt;_OBUF</arg>&gt; is incomplete. The signal is not driven by any source pin in the design.
+</msg>
+
+<msg type="error" file="PhysDesignRules" num="368" delta="old" >The signal &lt;<arg fmt="%s" index="1">an&lt;1&gt;_OBUF</arg>&gt; is incomplete. The signal is not driven by any source pin in the design.
+</msg>
+
+<msg type="error" file="PhysDesignRules" num="368" delta="old" >The signal &lt;<arg fmt="%s" index="1">an&lt;2&gt;_OBUF</arg>&gt; is incomplete. The signal is not driven by any source pin in the design.
+</msg>
+
+<msg type="error" file="PhysDesignRules" num="368" delta="old" >The signal &lt;<arg fmt="%s" index="1">an&lt;3&gt;_OBUF</arg>&gt; is incomplete. The signal is not driven by any source pin in the design.
+</msg>
+
+<msg type="error" file="PhysDesignRules" num="368" delta="old" >The signal &lt;<arg fmt="%s" index="1">seg&lt;0&gt;_OBUF</arg>&gt; is incomplete. The signal is not driven by any source pin in the design.
+</msg>
+
+<msg type="error" file="PhysDesignRules" num="368" delta="old" >The signal &lt;<arg fmt="%s" index="1">seg&lt;1&gt;_OBUF</arg>&gt; is incomplete. The signal is not driven by any source pin in the design.
+</msg>
+
+<msg type="error" file="PhysDesignRules" num="368" delta="old" >The signal &lt;<arg fmt="%s" index="1">seg&lt;2&gt;_OBUF</arg>&gt; is incomplete. The signal is not driven by any source pin in the design.
+</msg>
+
+<msg type="error" file="PhysDesignRules" num="368" delta="old" >The signal &lt;<arg fmt="%s" index="1">seg&lt;3&gt;_OBUF</arg>&gt; is incomplete. The signal is not driven by any source pin in the design.
+</msg>
+
+<msg type="error" file="PhysDesignRules" num="368" delta="old" >The signal &lt;<arg fmt="%s" index="1">seg&lt;4&gt;_OBUF</arg>&gt; is incomplete. The signal is not driven by any source pin in the design.
+</msg>
+
+<msg type="error" file="PhysDesignRules" num="368" delta="old" >The signal &lt;<arg fmt="%s" index="1">seg&lt;5&gt;_OBUF</arg>&gt; is incomplete. The signal is not driven by any source pin in the design.
+</msg>
+
+<msg type="error" file="PhysDesignRules" num="368" delta="old" >The signal &lt;<arg fmt="%s" index="1">seg&lt;6&gt;_OBUF</arg>&gt; is incomplete. The signal is not driven by any source pin in the design.
+</msg>
+
+<msg type="error" file="PhysDesignRules" num="10" delta="old" >The network &lt;<arg fmt="%s" index="1">an&lt;0&gt;_OBUF</arg>&gt; is completely unrouted.
+</msg>
+
+<msg type="error" file="PhysDesignRules" num="10" delta="old" >The network &lt;<arg fmt="%s" index="1">an&lt;1&gt;_OBUF</arg>&gt; is completely unrouted.
+</msg>
+
+<msg type="error" file="PhysDesignRules" num="10" delta="old" >The network &lt;<arg fmt="%s" index="1">an&lt;2&gt;_OBUF</arg>&gt; is completely unrouted.
+</msg>
+
+<msg type="error" file="PhysDesignRules" num="10" delta="old" >The network &lt;<arg fmt="%s" index="1">an&lt;3&gt;_OBUF</arg>&gt; is completely unrouted.
+</msg>
+
+<msg type="error" file="PhysDesignRules" num="10" delta="old" >The network &lt;<arg fmt="%s" index="1">seg&lt;0&gt;_OBUF</arg>&gt; is completely unrouted.
+</msg>
+
+<msg type="error" file="PhysDesignRules" num="10" delta="old" >The network &lt;<arg fmt="%s" index="1">seg&lt;1&gt;_OBUF</arg>&gt; is completely unrouted.
+</msg>
+
+<msg type="error" file="PhysDesignRules" num="10" delta="old" >The network &lt;<arg fmt="%s" index="1">seg&lt;2&gt;_OBUF</arg>&gt; is completely unrouted.
+</msg>
+
+<msg type="error" file="PhysDesignRules" num="10" delta="old" >The network &lt;<arg fmt="%s" index="1">seg&lt;3&gt;_OBUF</arg>&gt; is completely unrouted.
+</msg>
+
+<msg type="error" file="PhysDesignRules" num="10" delta="old" >The network &lt;<arg fmt="%s" index="1">seg&lt;4&gt;_OBUF</arg>&gt; is completely unrouted.
+</msg>
+
+<msg type="error" file="PhysDesignRules" num="10" delta="old" >The network &lt;<arg fmt="%s" index="1">seg&lt;5&gt;_OBUF</arg>&gt; is completely unrouted.
+</msg>
+
+<msg type="error" file="PhysDesignRules" num="10" delta="old" >The network &lt;<arg fmt="%s" index="1">seg&lt;6&gt;_OBUF</arg>&gt; is completely unrouted.
+</msg>
+
+<msg type="error" file="Bitgen" num="25" delta="old" >DRC detected <arg fmt="%d" index="1">22</arg> errors and <arg fmt="%d" index="2">0</arg> warnings.  Please see the previously displayed individual error or warning messages for more details.
+</msg>
+
+</messages>
+

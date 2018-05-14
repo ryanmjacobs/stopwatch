@@ -1,13 +1,12 @@
 module top(
 	input clk, output [12:0] seconds,
-	input [7:0] sw, input btnl, input btnr
+	input [7:0] sw, input btnl, input btnr,
+	output [6:0] seg, output [3:0] an
 );
-    reg rst = 0;
     wire [26:0] out1;    // 1Hz Clock
     wire [25:0] out2;    // 2Hz Clock
     wire [17:0] out7seg; // 380Hz Clock
     wire [25:0] outadj;  // 5Hz Clock
-    clkdiv clkdiv(clk, rst, out1, out2, out7seg, outadj);
 
     // two control buttons
     wire btn_reset;
@@ -16,6 +15,7 @@ module top(
     reg btnCenter = 0; // temp
     debounce db1(clk, btnl,  btn_reset);
     debounce db2(clk, btnr, btn_set_pause);
+	 clkdiv clkdiv(clk, btn_reset, out1, out2, out7seg, outadj);
     
     // slider switches
     wire [1:0] sel = sw[1:0]; // selects the digit position to adjust
@@ -32,9 +32,9 @@ module top(
     // adjust registers
     wire [2:0] adj_sel;
     reg [3:0] adj_val = 5;
-    assign adj_sel = adj ? sel : 5; // 5+ means void
+    assign adj_sel = adj ? sel : 3'd5; // 5+ means void
 
     counter counter(clk, out1, btn_reset, paused,
                     adj, adj_sel, num,
-                    min_l, min_r, sec_l, sec_r);
+						  seg, an);
 endmodule

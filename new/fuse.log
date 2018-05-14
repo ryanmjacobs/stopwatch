@@ -1,0 +1,28 @@
+Running: C:\Xilinx\14.6\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Users/152/stopwatch/new/top_tb_isim_beh.exe -prj C:/Users/152/stopwatch/new/top_tb_beh.prj work.top_tb work.glbl 
+ISim P.68d (signature 0x7708f090)
+Number of CPUs detected in this system: 2
+Turning on mult-threading, number of parallel sub-compilation jobs: 4 
+Determining compilation order of HDL files
+Analyzing Verilog file "C:/Users/152/stopwatch/new/../src/display.v" into library work
+Analyzing Verilog file "C:/Users/152/stopwatch/new/../src/debounce.v" into library work
+Analyzing Verilog file "C:/Users/152/stopwatch/new/../src/counter.v" into library work
+Analyzing Verilog file "C:/Users/152/stopwatch/new/../src/clkdiv.v" into library work
+Analyzing Verilog file "C:/Users/152/stopwatch/new/../src/top.v" into library work
+Analyzing Verilog file "C:/Users/152/stopwatch/new/../src/tb/top_tb.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.6/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module debounce_default
+Compiling module clkdiv
+Compiling module segment
+Compiling module display
+Compiling module counter
+Compiling module top
+Compiling module top_tb
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 5 sub-compilation(s) to finish...
+Compiled 8 Verilog Units
+Built simulation executable C:/Users/152/stopwatch/new/top_tb_isim_beh.exe
+Fuse Memory Usage: 27132 KB
+Fuse CPU Usage: 576 ms

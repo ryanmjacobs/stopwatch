@@ -4,7 +4,12 @@ module display(
     input adj,
 	 
 	 output reg [6:0] seg,
-	 output reg [3:0] an
+	 output reg [3:0] an,
+	 
+	 input [4:0] min_l,
+    input [4:0] min_r,
+    input [4:0] sec_l,
+    input [4:0] sec_r
 );
     // calculate segment values
     // in this order: min_l, min_r, sec_l, sec_r
@@ -13,15 +18,14 @@ module display(
     segment segment1(min_r, segments[1]);
     segment segment2(sec_l, segments[2]);
     segment segment3(sec_r, segments[3]);
-
     // render a different panel on each clock tick
-    reg [3:0] panel = 0;
-    always @(posedge clk) begin
+	 reg [6:0] num = 7'b0001000;
+    /*always @(posedge clk) begin
         panel = (panel + 1'b1) % 4;
         an = 1 << panel;
 		  seg = segments[panel];
-    end
-
+    end*/
+/*
     always @(clk) begin
         if (out1 == 0 && adj) begin
             // toggle panel
@@ -30,7 +34,7 @@ module display(
         if (!adj) begin
             // ensure panel is on
         end
-    end
+    end*/
 endmodule
 
 module segment(value, storage);
@@ -38,7 +42,7 @@ module segment(value, storage);
     output reg [7:0] storage; // storage register for the lookup table
 
     // lookup bit-value for 7-segment digit
-    always @(value) begin
+    always @* begin
         case (value)
             0: storage = 7'b1000000;
             1: storage = 7'b1111001;

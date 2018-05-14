@@ -1,0 +1,42 @@
+Release 14.6 Drc P.68d (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Mon May 14 11:38:59 2018
+
+drc -z top.ncd top.pcf
+
+ERROR:PhysDesignRules:368 - The signal <an<0>_OBUF> is incomplete. The signal is
+   not driven by any source pin in the design.
+ERROR:PhysDesignRules:368 - The signal <an<1>_OBUF> is incomplete. The signal is
+   not driven by any source pin in the design.
+ERROR:PhysDesignRules:368 - The signal <an<2>_OBUF> is incomplete. The signal is
+   not driven by any source pin in the design.
+ERROR:PhysDesignRules:368 - The signal <an<3>_OBUF> is incomplete. The signal is
+   not driven by any source pin in the design.
+ERROR:PhysDesignRules:368 - The signal <seg<0>_OBUF> is incomplete. The signal
+   is not driven by any source pin in the design.
+ERROR:PhysDesignRules:368 - The signal <seg<1>_OBUF> is incomplete. The signal
+   is not driven by any source pin in the design.
+ERROR:PhysDesignRules:368 - The signal <seg<2>_OBUF> is incomplete. The signal
+   is not driven by any source pin in the design.
+ERROR:PhysDesignRules:368 - The signal <seg<3>_OBUF> is incomplete. The signal
+   is not driven by any source pin in the design.
+ERROR:PhysDesignRules:368 - The signal <seg<4>_OBUF> is incomplete. The signal
+   is not driven by any source pin in the design.
+ERROR:PhysDesignRules:368 - The signal <seg<5>_OBUF> is incomplete. The signal
+   is not driven by any source pin in the design.
+ERROR:PhysDesignRules:368 - The signal <seg<6>_OBUF> is incomplete. The signal
+   is not driven by any source pin in the design.
+ERROR:PhysDesignRules:10 - The network <an<0>_OBUF> is completely unrouted.
+ERROR:PhysDesignRules:10 - The network <an<1>_OBUF> is completely unrouted.
+ERROR:PhysDesignRules:10 - The network <an<2>_OBUF> is completely unrouted.
+ERROR:PhysDesignRules:10 - The network <an<3>_OBUF> is completely unrouted.
+ERROR:PhysDesignRules:10 - The network <seg<0>_OBUF> is completely unrouted.
+ERROR:PhysDesignRules:10 - The network <seg<1>_OBUF> is completely unrouted.
+ERROR:PhysDesignRules:10 - The network <seg<2>_OBUF> is completely unrouted.
+ERROR:PhysDesignRules:10 - The network <seg<3>_OBUF> is completely unrouted.
+ERROR:PhysDesignRules:10 - The network <seg<4>_OBUF> is completely unrouted.
+ERROR:PhysDesignRules:10 - The network <seg<5>_OBUF> is completely unrouted.
+ERROR:PhysDesignRules:10 - The network <seg<6>_OBUF> is completely unrouted.
+ERROR:Bitgen:25 - DRC detected 22 errors and 0 warnings.  Please see the
+   previously displayed individual error or warning messages for more details.

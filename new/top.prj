@@ -1,0 +1,5 @@
+verilog work "../src/display.v"
+verilog work "../src/debounce.v"
+verilog work "../src/counter.v"
+verilog work "../src/clkdiv.v"
+verilog work "../src/top.v"

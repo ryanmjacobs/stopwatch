@@ -4,6 +4,7 @@ module counter(
     input paused,
 
     input adj,
+    input btn_set_pause,
     input [2:0] adj_sel,
     input [3:0] adj_val,
 	 
@@ -34,7 +35,7 @@ module counter(
             min_r = 0;
             sec_l = 0;
             sec_r = 0;
-	    end else if (adj_sel != 5) begin
+	    end else if (btn_set_pause && adj_sel != 5) begin
 		    // adjust
 		    case (adj_sel)
               3: min_l = adj_val;

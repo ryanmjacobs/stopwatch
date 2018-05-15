@@ -31,6 +31,6 @@ module top(
 	wire rst;
     assign rst = 0;
     counter counter(clk, rst, paused,
-                    adj, adj_sel, num,
+                    adj, btn_set_pause, adj_sel, num,
 				    Led, seg, an);
 endmodule

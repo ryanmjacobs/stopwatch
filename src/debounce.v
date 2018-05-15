@@ -7,9 +7,9 @@ module debounce(input clk, input src, output reg mydest);
     reg [23:0] count;
 
     initial begin
-        mydest   <= src;
-        state <= 0;
-        count <= 0;
+        mydest <= src;
+        state  <= 0;
+        count  <= 0;
     end
 
     always @(posedge clk) begin

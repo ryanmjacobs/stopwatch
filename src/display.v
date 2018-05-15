@@ -27,25 +27,25 @@ module display(
     
     // render a different panel on each clock tick
     reg [1:0] panel = 0;
+    reg enabled = 1;
     always @(posedge clk) begin
+        // scan segments
         if (out7seg == 0) begin
             panel = panel + 1'b1;
-            an = ~(1 << panel);
             Led = segments[panel];
             seg = segments[panel];
+            
+            if (enabled)
+                an = ~(1 << panel);
+            else
+                an = 4'b1111;
         end
-    end
     
-/*
-    always @(clk) begin
-        if (out1 == 0 && adj) begin
-            // toggle panel
-        end
-
-        if (!adj) begin
-            // ensure panel is on
-        end
-    end*/
+        if (outadj == 0 && adj)
+            enabled = ~enabled;
+        else if (!adj)
+            enabled = 1;
+    end
 endmodule
 
 module segment(value, storage);

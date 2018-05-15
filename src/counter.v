@@ -44,7 +44,8 @@ module counter(
             3: sec_r = adj_val;
           endcase
           */
-        if (out1 == 0) begin// && !paused) begin
+        //end else
+        if (out1 == 0 && !paused) begin
             sec_r = sec_r + 1;
 
             // seconds, ones overflow

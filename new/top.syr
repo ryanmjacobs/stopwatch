@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Reading design: top.prj
 
@@ -126,7 +126,6 @@ Elaborating module <top>.
 Elaborating module <debounce>.
 WARNING:HDLCompiler:413 - "C:\Users\152\stopwatch\src\debounce.v" Line 20: Result of 25-bit expression is truncated to fit in 24-bit target.
 WARNING:HDLCompiler:1127 - "C:\Users\152\stopwatch\src\top.v" Line 14: Assignment to btn_reset ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:\Users\152\stopwatch\src\top.v" Line 15: Assignment to btn_set_pause ignored, since the identifier is never used
 
 Elaborating module <counter>.
 
@@ -152,16 +151,15 @@ WARNING:HDLCompiler:1127 - "C:\Users\152\stopwatch\src\counter.v" Line 19: Assig
 Elaborating module <display>.
 
 Elaborating module <segment>.
-WARNING:HDLCompiler:413 - "C:\Users\152\stopwatch\src\display.v" Line 33: Result of 32-bit expression is truncated to fit in 4-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\152\stopwatch\src\display.v" Line 34: Result of 8-bit expression is truncated to fit in 7-bit target.
 WARNING:HDLCompiler:413 - "C:\Users\152\stopwatch\src\display.v" Line 35: Result of 8-bit expression is truncated to fit in 7-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\152\stopwatch\src\counter.v" Line 48: Result of 6-bit expression is truncated to fit in 5-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\152\stopwatch\src\counter.v" Line 53: Result of 6-bit expression is truncated to fit in 5-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\152\stopwatch\src\counter.v" Line 60: Result of 6-bit expression is truncated to fit in 5-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\152\stopwatch\src\counter.v" Line 66: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\152\stopwatch\src\display.v" Line 36: Result of 8-bit expression is truncated to fit in 7-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\152\stopwatch\src\display.v" Line 39: Result of 32-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\152\stopwatch\src\counter.v" Line 49: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\152\stopwatch\src\counter.v" Line 54: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\152\stopwatch\src\counter.v" Line 61: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\152\stopwatch\src\counter.v" Line 67: Result of 6-bit expression is truncated to fit in 5-bit target.
 WARNING:HDLCompiler:634 - "C:\Users\152\stopwatch\src\counter.v" Line 19: Net <btn_reset> does not have a driver.
 WARNING:Xst:2972 - "C:\Users\152\stopwatch\src\top.v" line 14. All outputs of instance <db1> of block <debounce> are unconnected in block <top>. Underlying logic will be removed.
-WARNING:Xst:2972 - "C:\Users\152\stopwatch\src\top.v" line 15. All outputs of instance <db2> of block <debounce> are unconnected in block <top>. Underlying logic will be removed.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -171,27 +169,41 @@ Synthesizing Unit <top>.
     Related source file is "C:\Users\152\stopwatch\src\top.v".
 WARNING:Xst:647 - Input <sw<2:2>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 INFO:Xst:3210 - "C:\Users\152\stopwatch\src\top.v" line 14: Output port <mydest> of the instance <db1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\152\stopwatch\src\top.v" line 15: Output port <mydest> of the instance <db2> is unconnected or connected to loadless signal.
     Summary:
 	inferred   1 Multiplexer(s).
 Unit <top> synthesized.
+
+Synthesizing Unit <debounce>.
+    Related source file is "C:\Users\152\stopwatch\src\debounce.v".
+        CLK_FREQ_KHZ = 100000
+        threshold = 100000
+    Found 24-bit register for signal <count>.
+    Found 1-bit register for signal <mydest>.
+    Found 2-bit register for signal <state>.
+    Found 24-bit adder for signal <count[23]_GND_2_o_add_1_OUT> created at line 20.
+    Found 1-bit comparator equal for signal <n0001> created at line 22
+    Found 24-bit comparator greater for signal <n0003> created at line 25
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  27 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+Unit <debounce> synthesized.
 
 Synthesizing Unit <counter>.
     Related source file is "C:\Users\152\stopwatch\src\counter.v".
 WARNING:Xst:647 - Input <adj_sel> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <adj_val> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <rst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <paused> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 INFO:Xst:3210 - "C:\Users\152\stopwatch\src\counter.v" line 19: Output port <out2> of the instance <clkdiv> is unconnected or connected to loadless signal.
 WARNING:Xst:653 - Signal <btn_reset> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Found 5-bit register for signal <sec_l>.
     Found 5-bit register for signal <min_r>.
     Found 5-bit register for signal <min_l>.
     Found 5-bit register for signal <sec_r>.
-    Found 5-bit adder for signal <_n0071> created at line 48.
-    Found 5-bit adder for signal <sec_l[4]_GND_3_o_add_4_OUT> created at line 53.
-    Found 5-bit adder for signal <min_r[4]_GND_3_o_add_8_OUT> created at line 60.
-    Found 5-bit adder for signal <min_l[4]_GND_3_o_add_13_OUT> created at line 66.
+    Found 5-bit adder for signal <_n0073> created at line 49.
+    Found 5-bit adder for signal <sec_l[4]_GND_3_o_add_4_OUT> created at line 54.
+    Found 5-bit adder for signal <min_r[4]_GND_3_o_add_8_OUT> created at line 61.
+    Found 5-bit adder for signal <min_l[4]_GND_3_o_add_13_OUT> created at line 67.
     Summary:
 	inferred   4 Adder/Subtractor(s).
 	inferred  20 D-type flip-flop(s).
@@ -215,18 +227,17 @@ Unit <clkdiv> synthesized.
 
 Synthesizing Unit <display>.
     Related source file is "C:\Users\152\stopwatch\src\display.v".
-WARNING:Xst:647 - Input <outadj> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <adj> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Found 4-bit register for signal <an>.
     Found 7-bit register for signal <Led>.
     Found 7-bit register for signal <seg>.
+    Found 4-bit register for signal <an>.
+    Found 1-bit register for signal <enabled>.
     Found 2-bit register for signal <panel>.
-    Found 2-bit adder for signal <panel[1]_GND_5_o_add_2_OUT> created at line 32.
-    Found 32-bit shifter logical left for signal <GND_5_o_panel[1]_shift_left_3_OUT> created at line 33
-    Found 8-bit 4-to-1 multiplexer for signal <n0030> created at line 35.
+    Found 2-bit adder for signal <panel[1]_GND_5_o_add_2_OUT> created at line 34.
+    Found 32-bit shifter logical left for signal <GND_5_o_panel[1]_shift_left_5_OUT> created at line 39
+    Found 8-bit 4-to-1 multiplexer for signal <n0035> created at line 36.
     Summary:
 	inferred   1 Adder/Subtractor(s).
-	inferred  20 D-type flip-flop(s).
+	inferred  21 D-type flip-flop(s).
 	inferred   1 Multiplexer(s).
 	inferred   1 Combinational logic shifter(s).
 Unit <display> synthesized.
@@ -250,15 +261,18 @@ Unit <segment> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 9
+# Adders/Subtractors                                   : 10
  18-bit adder                                          : 1
  2-bit adder                                           : 1
+ 24-bit adder                                          : 1
  26-bit adder                                          : 2
  27-bit adder                                          : 1
  5-bit adder                                           : 4
-# Registers                                            : 12
+# Registers                                            : 16
+ 1-bit register                                        : 2
  18-bit register                                       : 1
- 2-bit register                                        : 1
+ 2-bit register                                        : 2
+ 24-bit register                                       : 1
  26-bit register                                       : 2
  27-bit register                                       : 1
  4-bit register                                        : 1
@@ -266,6 +280,9 @@ Macro Statistics
  7-bit register                                        : 2
 # Latches                                              : 32
  1-bit latch                                           : 32
+# Comparators                                          : 2
+ 1-bit comparator equal                                : 1
+ 24-bit comparator greater                             : 1
 # Multiplexers                                         : 72
  1-bit 2-to-1 multiplexer                              : 68
  3-bit 2-to-1 multiplexer                              : 1
@@ -306,6 +323,10 @@ The following registers are absorbed into counter <min_r>: 1 register on signal 
 The following registers are absorbed into counter <sec_r>: 1 register on signal <sec_r>.
 Unit <counter> synthesized (advanced).
 
+Synthesizing (advanced) Unit <debounce>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <debounce> synthesized (advanced).
+
 Synthesizing (advanced) Unit <display>.
 The following registers are absorbed into counter <panel>: 1 register on signal <panel>.
 Unit <display> synthesized (advanced).
@@ -317,14 +338,18 @@ Macro Statistics
 # Adders/Subtractors                                   : 4
  2-bit adder                                           : 1
  5-bit adder                                           : 3
-# Counters                                             : 9
+# Counters                                             : 10
  18-bit up counter                                     : 1
  2-bit up counter                                      : 1
+ 24-bit up counter                                     : 1
  26-bit up counter                                     : 2
  27-bit up counter                                     : 1
  5-bit up counter                                      : 4
-# Registers                                            : 18
- Flip-Flops                                            : 18
+# Registers                                            : 22
+ Flip-Flops                                            : 22
+# Comparators                                          : 2
+ 1-bit comparator equal                                : 1
+ 24-bit comparator greater                             : 1
 # Multiplexers                                         : 71
  1-bit 2-to-1 multiplexer                              : 68
  5-bit 2-to-1 multiplexer                              : 2
@@ -348,6 +373,8 @@ INFO:Xst:2261 - The FF/Latch <Led_6> in Unit <display> is equivalent to the foll
 
 Optimizing unit <top> ...
 
+Optimizing unit <debounce> ...
+
 Optimizing unit <counter> ...
 
 Optimizing unit <clkdiv> ...
@@ -355,33 +382,14 @@ Optimizing unit <clkdiv> ...
 Optimizing unit <display> ...
 
 Optimizing unit <segment> ...
-WARNING:Xst:2677 - Node <counter/clkdiv/outadj_25> of sequential type is unconnected in block <top>.
-WARNING:Xst:2677 - Node <counter/clkdiv/outadj_24> of sequential type is unconnected in block <top>.
-WARNING:Xst:2677 - Node <counter/clkdiv/outadj_23> of sequential type is unconnected in block <top>.
-WARNING:Xst:2677 - Node <counter/clkdiv/outadj_22> of sequential type is unconnected in block <top>.
-WARNING:Xst:2677 - Node <counter/clkdiv/outadj_21> of sequential type is unconnected in block <top>.
-WARNING:Xst:2677 - Node <counter/clkdiv/outadj_20> of sequential type is unconnected in block <top>.
-WARNING:Xst:2677 - Node <counter/clkdiv/outadj_19> of sequential type is unconnected in block <top>.
-WARNING:Xst:2677 - Node <counter/clkdiv/outadj_18> of sequential type is unconnected in block <top>.
-WARNING:Xst:2677 - Node <counter/clkdiv/outadj_17> of sequential type is unconnected in block <top>.
-WARNING:Xst:2677 - Node <counter/clkdiv/outadj_16> of sequential type is unconnected in block <top>.
-WARNING:Xst:2677 - Node <counter/clkdiv/outadj_15> of sequential type is unconnected in block <top>.
-WARNING:Xst:2677 - Node <counter/clkdiv/outadj_14> of sequential type is unconnected in block <top>.
-WARNING:Xst:2677 - Node <counter/clkdiv/outadj_13> of sequential type is unconnected in block <top>.
-WARNING:Xst:2677 - Node <counter/clkdiv/outadj_12> of sequential type is unconnected in block <top>.
-WARNING:Xst:2677 - Node <counter/clkdiv/outadj_11> of sequential type is unconnected in block <top>.
-WARNING:Xst:2677 - Node <counter/clkdiv/outadj_10> of sequential type is unconnected in block <top>.
-WARNING:Xst:2677 - Node <counter/clkdiv/outadj_9> of sequential type is unconnected in block <top>.
-WARNING:Xst:2677 - Node <counter/clkdiv/outadj_8> of sequential type is unconnected in block <top>.
-WARNING:Xst:2677 - Node <counter/clkdiv/outadj_7> of sequential type is unconnected in block <top>.
-WARNING:Xst:2677 - Node <counter/clkdiv/outadj_6> of sequential type is unconnected in block <top>.
-WARNING:Xst:2677 - Node <counter/clkdiv/outadj_5> of sequential type is unconnected in block <top>.
-WARNING:Xst:2677 - Node <counter/clkdiv/outadj_4> of sequential type is unconnected in block <top>.
-WARNING:Xst:2677 - Node <counter/clkdiv/outadj_3> of sequential type is unconnected in block <top>.
-WARNING:Xst:2677 - Node <counter/clkdiv/outadj_2> of sequential type is unconnected in block <top>.
-WARNING:Xst:2677 - Node <counter/clkdiv/outadj_1> of sequential type is unconnected in block <top>.
-WARNING:Xst:2677 - Node <counter/clkdiv/outadj_0> of sequential type is unconnected in block <top>.
-WARNING:Xst:1293 - FF/Latch <counter/sec_l_4> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <db2/count_22> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <db2/count_21> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <db2/count_23> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <db2/count_19> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <db2/count_18> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <db2/count_20> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <db2/count_17> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <counter/sec_l_4> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <counter/sec_l_3> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1294 - Latch <counter/display/segment1/storage_3> is equivalent to a wire in block <top>.
 WARNING:Xst:1294 - Latch <counter/display/segment1/storage_0> is equivalent to a wire in block <top>.
@@ -390,14 +398,14 @@ WARNING:Xst:1294 - Latch <counter/display/segment1/storage_5> is equivalent to a
 WARNING:Xst:1294 - Latch <counter/display/segment1/storage_1> is equivalent to a wire in block <top>.
 WARNING:Xst:1294 - Latch <counter/display/segment1/storage_2> is equivalent to a wire in block <top>.
 WARNING:Xst:1294 - Latch <counter/display/segment1/storage_6> is equivalent to a wire in block <top>.
-INFO:Xst:2261 - The FF/Latch <counter/clkdiv/out1_0> in Unit <top> is equivalent to the following 2 FFs/Latches, which will be removed : <counter/clkdiv/out7seg_0> <counter/clkdiv/out2_0> 
-INFO:Xst:2261 - The FF/Latch <counter/clkdiv/out1_1> in Unit <top> is equivalent to the following 2 FFs/Latches, which will be removed : <counter/clkdiv/out7seg_1> <counter/clkdiv/out2_1> 
-INFO:Xst:2261 - The FF/Latch <counter/clkdiv/out1_2> in Unit <top> is equivalent to the following 2 FFs/Latches, which will be removed : <counter/clkdiv/out7seg_2> <counter/clkdiv/out2_2> 
-INFO:Xst:2261 - The FF/Latch <counter/clkdiv/out1_3> in Unit <top> is equivalent to the following 2 FFs/Latches, which will be removed : <counter/clkdiv/out7seg_3> <counter/clkdiv/out2_3> 
-INFO:Xst:2261 - The FF/Latch <counter/clkdiv/out1_4> in Unit <top> is equivalent to the following 2 FFs/Latches, which will be removed : <counter/clkdiv/out7seg_4> <counter/clkdiv/out2_4> 
-INFO:Xst:2261 - The FF/Latch <counter/clkdiv/out1_5> in Unit <top> is equivalent to the following 2 FFs/Latches, which will be removed : <counter/clkdiv/out7seg_5> <counter/clkdiv/out2_5> 
-INFO:Xst:2261 - The FF/Latch <counter/clkdiv/out1_6> in Unit <top> is equivalent to the following 2 FFs/Latches, which will be removed : <counter/clkdiv/out7seg_6> <counter/clkdiv/out2_6> 
-INFO:Xst:2261 - The FF/Latch <counter/clkdiv/out1_7> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <counter/clkdiv/out7seg_7> 
+INFO:Xst:2261 - The FF/Latch <counter/clkdiv/out1_0> in Unit <top> is equivalent to the following 3 FFs/Latches, which will be removed : <counter/clkdiv/outadj_0> <counter/clkdiv/out7seg_0> <counter/clkdiv/out2_0> 
+INFO:Xst:2261 - The FF/Latch <counter/clkdiv/out1_1> in Unit <top> is equivalent to the following 3 FFs/Latches, which will be removed : <counter/clkdiv/outadj_1> <counter/clkdiv/out7seg_1> <counter/clkdiv/out2_1> 
+INFO:Xst:2261 - The FF/Latch <counter/clkdiv/out1_2> in Unit <top> is equivalent to the following 3 FFs/Latches, which will be removed : <counter/clkdiv/outadj_2> <counter/clkdiv/out7seg_2> <counter/clkdiv/out2_2> 
+INFO:Xst:2261 - The FF/Latch <counter/clkdiv/out1_3> in Unit <top> is equivalent to the following 3 FFs/Latches, which will be removed : <counter/clkdiv/outadj_3> <counter/clkdiv/out7seg_3> <counter/clkdiv/out2_3> 
+INFO:Xst:2261 - The FF/Latch <counter/clkdiv/out1_4> in Unit <top> is equivalent to the following 3 FFs/Latches, which will be removed : <counter/clkdiv/outadj_4> <counter/clkdiv/out7seg_4> <counter/clkdiv/out2_4> 
+INFO:Xst:2261 - The FF/Latch <counter/clkdiv/out1_5> in Unit <top> is equivalent to the following 3 FFs/Latches, which will be removed : <counter/clkdiv/outadj_5> <counter/clkdiv/out7seg_5> <counter/clkdiv/out2_5> 
+INFO:Xst:2261 - The FF/Latch <counter/clkdiv/out1_6> in Unit <top> is equivalent to the following 3 FFs/Latches, which will be removed : <counter/clkdiv/outadj_6> <counter/clkdiv/out7seg_6> <counter/clkdiv/out2_6> 
+INFO:Xst:2261 - The FF/Latch <counter/clkdiv/out1_7> in Unit <top> is equivalent to the following 2 FFs/Latches, which will be removed : <counter/clkdiv/outadj_7> <counter/clkdiv/out7seg_7> 
 
 Mapping all equations...
 Building and optimizing final netlist ...
@@ -409,8 +417,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 87
- Flip-Flops                                            : 87
+# Registers                                            : 126
+ Flip-Flops                                            : 126
 
 =========================================================================
 
@@ -433,26 +441,27 @@ Top Level Output File Name         : top.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 325
+# BELS                             : 486
 #      GND                         : 1
-#      INV                         : 4
-#      LUT1                        : 68
-#      LUT2                        : 9
-#      LUT3                        : 31
-#      LUT4                        : 28
-#      LUT5                        : 11
-#      LUT6                        : 48
-#      MUXCY                       : 68
+#      INV                         : 6
+#      LUT1                        : 109
+#      LUT2                        : 25
+#      LUT3                        : 34
+#      LUT4                        : 30
+#      LUT5                        : 19
+#      LUT6                        : 61
+#      MUXCY                       : 109
 #      VCC                         : 1
-#      XORCY                       : 56
-# FlipFlops/Latches                : 108
-#      FD                          : 42
-#      FDE                         : 18
-#      FDR                         : 27
+#      XORCY                       : 91
+# FlipFlops/Latches                : 147
+#      FD                          : 66
+#      FDE                         : 14
+#      FDR                         : 46
 #      LD                          : 21
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 18
+# IO Buffers                       : 20
+#      IBUF                        : 2
 #      OBUF                        : 18
 
 Device utilization summary:
@@ -462,20 +471,20 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             108  out of  18224     0%  
- Number of Slice LUTs:                  199  out of   9112     2%  
-    Number used as Logic:               199  out of   9112     2%  
+ Number of Slice Registers:             147  out of  18224     0%  
+ Number of Slice LUTs:                  284  out of   9112     3%  
+    Number used as Logic:               284  out of   9112     3%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    199
-   Number with an unused Flip Flop:      91  out of    199    45%  
-   Number with an unused LUT:             0  out of    199     0%  
-   Number of fully used LUT-FF pairs:   108  out of    199    54%  
-   Number of unique control sets:         7
+ Number of LUT Flip Flop pairs used:    285
+   Number with an unused Flip Flop:     138  out of    285    48%  
+   Number with an unused LUT:             1  out of    285     0%  
+   Number of fully used LUT-FF pairs:   146  out of    285    51%  
+   Number of unique control sets:         9
 
 IO Utilization: 
  Number of IOs:                          42
- Number of bonded IOBs:                  19  out of    232     8%  
+ Number of bonded IOBs:                  21  out of    232     9%  
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
@@ -501,7 +510,7 @@ Clock Information:
 ----------------------------------------------------------------+--------------------------------------------+-------+
 Clock Signal                                                    | Clock buffer(FF name)                      | Load  |
 ----------------------------------------------------------------+--------------------------------------------+-------+
-clk                                                             | BUFGP                                      | 87    |
+clk                                                             | BUFGP                                      | 126   |
 counter/display/segment0/_n0032(counter/display/segment0/out1:O)| NONE(*)(counter/display/segment0/storage_3)| 7     |
 counter/display/segment2/_n0032(counter/display/segment2/out1:O)| NONE(*)(counter/display/segment2/storage_3)| 7     |
 counter/display/segment3/_n0032(counter/display/segment3/out1:O)| NONE(*)(counter/display/segment3/storage_3)| 7     |
@@ -519,8 +528,8 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 5.340ns (Maximum Frequency: 187.254MHz)
-   Minimum input arrival time before clock: No path found
+   Minimum period: 5.856ns (Maximum Frequency: 170.756MHz)
+   Minimum input arrival time before clock: 5.850ns
    Maximum output required time after clock: 3.634ns
    Maximum combinational path delay: No path found
 
@@ -530,28 +539,51 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 5.340ns (frequency: 187.254MHz)
-  Total number of paths / destination ports: 4436 / 132
+  Clock period: 5.856ns (frequency: 170.756MHz)
+  Total number of paths / destination ports: 7033 / 185
 -------------------------------------------------------------------------
-Delay:               5.340ns (Levels of Logic = 4)
-  Source:            counter/clkdiv/out1_19 (FF)
-  Destination:       counter/min_r_4 (FF)
+Delay:               5.856ns (Levels of Logic = 4)
+  Source:            counter/clkdiv/out1_1 (FF)
+  Destination:       counter/clkdiv/outadj_25 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: counter/clkdiv/out1_19 to counter/min_r_4
+  Data Path: counter/clkdiv/out1_1 to counter/clkdiv/outadj_25
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              3   0.447   1.015  counter/clkdiv/out1_19 (counter/clkdiv/out1_19)
-     LUT6:I0->O            2   0.203   0.864  counter/GND_3_o_GND_3_o_equal_2_o<26>4 (counter/GND_3_o_GND_3_o_equal_2_o<26>3)
-     LUT5:I1->O           19   0.203   1.416  counter/GND_3_o_GND_3_o_equal_2_o<26>6 (counter/GND_3_o_GND_3_o_equal_2_o)
-     LUT6:I1->O            1   0.203   0.684  counter/min_r_4_rstpot_G (N21)
-     LUT3:I1->O            1   0.203   0.000  counter/min_r_4_rstpot1 (counter/min_r_4_rstpot)
+     FDR:C->Q              9   0.447   1.194  counter/clkdiv/out1_1 (counter/clkdiv/out1_1)
+     LUT6:I0->O           15   0.203   0.982  counter/clkdiv/GND_4_o_GND_4_o_equal_2_o<26>4 (counter/clkdiv/GND_4_o_GND_4_o_equal_10_o<17>2)
+     LUT6:I5->O           30   0.205   1.264  counter/clkdiv/GND_4_o_GND_4_o_equal_2_o<26>7_1 (counter/clkdiv/GND_4_o_GND_4_o_equal_2_o<26>7)
+     LUT6:I5->O           18   0.205   1.050  counter/clkdiv/_n00956 (counter/clkdiv/_n0095)
+     LUT2:I1->O            1   0.205   0.000  counter/clkdiv/outadj_25_rstpot (counter/clkdiv/outadj_25_rstpot)
+     FD:D                      0.102          counter/clkdiv/outadj_25
+    ----------------------------------------
+    Total                      5.856ns (1.367ns logic, 4.489ns route)
+                                       (23.3% logic, 76.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 25 / 23
+-------------------------------------------------------------------------
+Offset:              5.850ns (Levels of Logic = 5)
+  Source:            sw<7> (PAD)
+  Destination:       counter/min_r_4 (FF)
+  Destination Clock: clk rising
+
+  Data Path: sw<7> to counter/min_r_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   1.222   0.995  sw_7_IBUF (sw_7_IBUF)
+     LUT6:I1->O            2   0.203   0.721  counter/GND_3_o_paused_AND_13_o1 (counter/GND_3_o_paused_AND_13_o1)
+     LUT5:I3->O           19   0.203   1.416  counter/GND_3_o_paused_AND_13_o6 (counter/GND_3_o_paused_AND_13_o)
+     LUT6:I1->O            1   0.203   0.580  counter/min_r_4_rstpot_G (N23)
+     LUT3:I2->O            1   0.205   0.000  counter/min_r_4_rstpot1 (counter/min_r_4_rstpot)
      FD:D                      0.102          counter/min_r_4
     ----------------------------------------
-    Total                      5.340ns (1.361ns logic, 3.979ns route)
-                                       (25.5% logic, 74.5% route)
+    Total                      5.850ns (2.138ns logic, 3.712ns route)
+                                       (36.5% logic, 63.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
@@ -582,7 +614,7 @@ Clock to Setup on destination clock clk
                                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 -------------------------------+---------+---------+---------+---------+
-clk                            |    5.340|         |         |         |
+clk                            |    5.856|         |         |         |
 counter/display/segment0/_n0032|         |    1.613|         |         |
 counter/display/segment2/_n0032|         |    1.630|         |         |
 counter/display/segment3/_n0032|         |    1.487|         |         |
@@ -615,14 +647,14 @@ clk            |         |         |    1.843|         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 8.00 secs
-Total CPU time to Xst completion: 8.75 secs
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 9.09 secs
  
 --> 
 
-Total memory usage is 259156 kilobytes
+Total memory usage is 259796 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   86 (   0 filtered)
-Number of infos    :   26 (   0 filtered)
+Number of warnings :   62 (   0 filtered)
+Number of infos    :   25 (   0 filtered)
 

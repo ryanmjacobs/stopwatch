@@ -14,19 +14,14 @@ module top(
     debounce db1(clk, btnl,  btn_reset);
     debounce db2(clk, btnr, btn_set_pause);
 	
-    
     // slider switches
     wire [1:0] sel = sw[1:0]; // selects the digit position to adjust
     wire [3:0] num = sw[6:3]; // represents the binary value to set
     wire       adj = sw[7];   // sets stopwatch to adjust mode
-    //reg [1:0] sel = 0;
-    //reg [3:0] num = 0;
-    //reg       adj = 0;
 
     // pause button
     wire paused;
-    //assign paused = (!adj && btn_set_pause);
-    assign paused = 0;
+    assign paused = (adj || btn_set_pause);
 
     // adjust registers
     wire [2:0] adj_sel;

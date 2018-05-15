@@ -20,16 +20,16 @@ module display(
     // calculate segment values
     // in this order: min_l, min_r, sec_l, sec_r
     wire [7:0] segments [0:3];
-    segment segment0(min_l, segments[0]);
-    segment segment1(min_r, segments[1]);
-    segment segment2(sec_l, segments[2]);
-    segment segment3(sec_r, segments[3]);
+    segment segment3(min_l, segments[3]);
+    segment segment2(min_r, segments[2]);
+    segment segment1(sec_l, segments[1]);
+    segment segment0(sec_r, segments[0]);
     
     // render a different panel on each clock tick
-    reg [1:0] panel = 3;
+    reg [1:0] panel = 0;
     always @(posedge clk) begin
-        if (outadj == 0) begin
-            panel = panel - 1'b1;
+        if (out7seg == 0) begin
+            panel = panel + 1'b1;
             an = ~(1 << panel);
             Led = segments[panel];
             seg = segments[panel];

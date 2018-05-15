@@ -1,6 +1,9 @@
 module top(
 	input clk, output [12:0] seconds,
 	input [7:0] sw, input btnl, input btnr,
+	
+	output [6:0] Led,
+	
 	output [6:0] seg, output [3:0] an
 );
     wire [26:0] out1;    // 1Hz Clock
@@ -34,7 +37,8 @@ module top(
     reg [3:0] adj_val = 5;
     assign adj_sel = adj ? sel : 3'd5; // 5+ means void
 
+	 
     counter counter(clk, out1, btn_reset, paused,
                     adj, adj_sel, num,
-						  seg, an);
+				    Led, seg, an);
 endmodule

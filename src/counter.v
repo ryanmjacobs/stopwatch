@@ -8,19 +8,21 @@ module counter(
     input [2:0] adj_sel,
     input [3:0] adj_val,
 	 
-	 output [6:0] seg,
-	 output [3:0] an
+	output [6:0] Led,
+	 
+	output [6:0] seg,
+	output [3:0] an
 );
-	 reg [4:0] min_l = 0;
+	reg [4:0] min_l = 0;
     reg [4:0] min_r = 0;
     reg [4:0] sec_l = 0;
     reg [4:0] sec_r = 0;
 
-	 display display(clk, out1, adj, seg, an,
-						  min_l, min_r, sec_l, sec_r);
-	 
+	display display(clk, out1, adj, seg, an, Led,
+                    min_l, min_r, sec_l, sec_r);
+     
     always @(posedge clk) begin
-	     // reset
+	    // reset
         if (rst) begin
             min_l = 0;
             min_r = 0;

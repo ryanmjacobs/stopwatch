@@ -8,31 +8,7 @@
 <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/152/stopwatch/src/clkdiv.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/152/stopwatch/src/counter.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/152/stopwatch/src/debounce.v&quot; into library work</arg>
-</msg>
-
 <msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/152/stopwatch/src/display.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/152/stopwatch/src/tb/counter_tb.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/152/stopwatch/src/tb/debounce_tb.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/152/stopwatch/src/tb/display_tb.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/152/stopwatch/src/tb/top_tb.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/152/stopwatch/src/top.v&quot; into library work</arg>
 </msg>
 
 </messages>

@@ -1,11 +1,15 @@
 //! **************************************************************************
-// Written by: Map P.68d on Mon May 14 11:38:37 2018
+// Written by: Map P.68d on Tue May 15 10:50:54 2018
 //! **************************************************************************
 
 SCHEMATIC START;
+COMP "Led<3>" LOCATE = SITE "V15" LEVEL 1;
 COMP "an<0>" LOCATE = SITE "N16" LEVEL 1;
+COMP "Led<4>" LOCATE = SITE "M11" LEVEL 1;
 COMP "an<1>" LOCATE = SITE "N15" LEVEL 1;
+COMP "Led<5>" LOCATE = SITE "N11" LEVEL 1;
 COMP "an<2>" LOCATE = SITE "P18" LEVEL 1;
+COMP "Led<6>" LOCATE = SITE "R11" LEVEL 1;
 COMP "an<3>" LOCATE = SITE "P17" LEVEL 1;
 COMP "clk" LOCATE = SITE "V10" LEVEL 1;
 COMP "seg<0>" LOCATE = SITE "T17" LEVEL 1;
@@ -25,5 +29,44 @@ COMP "sw<4>" LOCATE = SITE "N8" LEVEL 1;
 COMP "sw<5>" LOCATE = SITE "U8" LEVEL 1;
 COMP "sw<6>" LOCATE = SITE "V8" LEVEL 1;
 COMP "sw<7>" LOCATE = SITE "T5" LEVEL 1;
+COMP "Led<0>" LOCATE = SITE "U16" LEVEL 1;
+COMP "Led<1>" LOCATE = SITE "V16" LEVEL 1;
+COMP "Led<2>" LOCATE = SITE "U15" LEVEL 1;
+TIMEGRP sys_clk_pin = BEL "db2/count_0" BEL "db2/count_16" BEL "db2/count_15"
+        BEL "db2/count_14" BEL "db2/count_13" BEL "db2/count_12" BEL
+        "db2/count_11" BEL "db2/count_9" BEL "db2/count_8" BEL "db2/count_10"
+        BEL "db2/count_7" BEL "db2/count_6" BEL "db2/count_5" BEL
+        "db2/count_4" BEL "db2/count_2" BEL "db2/count_1" BEL "db2/count_3"
+        BEL "db2/state_1" BEL "db2/state_0" BEL "db1/count_0" BEL
+        "db1/count_16" BEL "db1/count_15" BEL "db1/count_14" BEL
+        "db1/count_13" BEL "db1/count_12" BEL "db1/count_11" BEL "db1/count_9"
+        BEL "db1/count_8" BEL "db1/count_10" BEL "db1/count_7" BEL
+        "db1/count_6" BEL "db1/count_5" BEL "db1/count_4" BEL "db1/count_2"
+        BEL "db1/count_1" BEL "db1/count_3" BEL "db1/state_1" BEL
+        "db1/state_0" BEL "clkdiv/out1_25" BEL "clkdiv/out1_24" BEL
+        "clkdiv/out1_26" BEL "clkdiv/out1_22" BEL "clkdiv/out1_21" BEL
+        "clkdiv/out1_23" BEL "clkdiv/out1_19" BEL "clkdiv/out1_18" BEL
+        "clkdiv/out1_20" BEL "clkdiv/out1_16" BEL "clkdiv/out1_15" BEL
+        "clkdiv/out1_17" BEL "clkdiv/out1_13" BEL "clkdiv/out1_12" BEL
+        "clkdiv/out1_14" BEL "clkdiv/out1_10" BEL "clkdiv/out1_9" BEL
+        "clkdiv/out1_11" BEL "clkdiv/out1_7" BEL "clkdiv/out1_6" BEL
+        "clkdiv/out1_8" BEL "clkdiv/out1_5" BEL "clkdiv/out1_4" BEL
+        "clkdiv/out1_3" BEL "clkdiv/out1_2" BEL "clkdiv/out1_0" BEL
+        "clkdiv/out1_1" BEL "counter/min_l_4" BEL "counter/min_l_3" BEL
+        "counter/min_l_2" BEL "counter/min_l_1" BEL "counter/min_l_0" BEL
+        "counter/display/Led_6" BEL "counter/display/Led_5" BEL
+        "counter/display/Led_4" BEL "counter/display/Led_3" BEL
+        "counter/display/Led_2" BEL "counter/display/Led_1" BEL
+        "counter/display/Led_0" BEL "db2/mydest" BEL "db1/mydest" BEL
+        "counter/min_r_0" BEL "counter/min_r_1" BEL "counter/sec_r_4" BEL
+        "counter/sec_r_3" BEL "counter/sec_r_2" BEL "counter/sec_r_1" BEL
+        "counter/sec_r_0" BEL "counter/sec_l_4" BEL "counter/sec_l_3" BEL
+        "counter/sec_l_2" BEL "counter/sec_l_1" BEL "counter/sec_l_0" BEL
+        "counter/min_r_4" BEL "counter/min_r_3" BEL "counter/min_r_2" BEL
+        "clk_BUFGP/BUFG" BEL "counter/display/Led_6_1" BEL
+        "counter/display/Led_5_1" BEL "counter/display/Led_4_1" BEL
+        "counter/display/Led_3_1" BEL "counter/display/Led_2_1" BEL
+        "counter/display/Led_1_1" BEL "counter/display/Led_0_1";
+TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
 SCHEMATIC END;
 

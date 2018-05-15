@@ -3,14 +3,19 @@ module display(
     input [26:0] out1, // 1Hz blink clock
     input adj,
 	 
-	 output reg [6:0] seg,
-	 output reg [3:0] an,
+	output reg [6:0] seg,
+	output reg [3:0] an,
+    output reg [6:0] Led,
 	 
-	 input [4:0] min_l,
+	input [4:0] min_l,
     input [4:0] min_r,
     input [4:0] sec_l,
     input [4:0] sec_r
 );
+    initial begin
+        Led <= 7'b0000000;
+    end
+    
     // calculate segment values
     // in this order: min_l, min_r, sec_l, sec_r
     wire [7:0] segments [0:3];
@@ -18,13 +23,17 @@ module display(
     segment segment1(min_r, segments[1]);
     segment segment2(sec_l, segments[2]);
     segment segment3(sec_r, segments[3]);
+    
     // render a different panel on each clock tick
-	 reg [6:0] num = 7'b0001000;
-    /*always @(posedge clk) begin
-        panel = (panel + 1'b1) % 4;
-        an = 1 << panel;
-		  seg = segments[panel];
-    end*/
+    reg [1:0] panel = 0;
+    always @(posedge clk) begin
+        panel = panel + 1'b1;
+        //an = 1 << panel;
+		an = 4'b0101;
+        Led = segments[0];
+        seg = segments[0];
+    end
+    
 /*
     always @(clk) begin
         if (out1 == 0 && adj) begin

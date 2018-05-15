@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Reading design: top.prj
 
@@ -146,7 +146,7 @@ WARNING:HDLCompiler:413 - "C:\Users\152\stopwatch\src\clkdiv.v" Line 86: Result 
 WARNING:HDLCompiler:413 - "C:\Users\152\stopwatch\src\clkdiv.v" Line 87: Result of 27-bit expression is truncated to fit in 26-bit target.
 WARNING:HDLCompiler:413 - "C:\Users\152\stopwatch\src\clkdiv.v" Line 88: Result of 19-bit expression is truncated to fit in 18-bit target.
 WARNING:HDLCompiler:413 - "C:\Users\152\stopwatch\src\clkdiv.v" Line 89: Result of 27-bit expression is truncated to fit in 26-bit target.
-WARNING:HDLCompiler:1127 - "C:\Users\152\stopwatch\src\counter.v" Line 19: Assignment to out2 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\152\stopwatch\src\counter.v" Line 20: Assignment to out2 ignored, since the identifier is never used
 
 Elaborating module <display>.
 
@@ -154,11 +154,11 @@ Elaborating module <segment>.
 WARNING:HDLCompiler:413 - "C:\Users\152\stopwatch\src\display.v" Line 35: Result of 8-bit expression is truncated to fit in 7-bit target.
 WARNING:HDLCompiler:413 - "C:\Users\152\stopwatch\src\display.v" Line 36: Result of 8-bit expression is truncated to fit in 7-bit target.
 WARNING:HDLCompiler:413 - "C:\Users\152\stopwatch\src\display.v" Line 39: Result of 32-bit expression is truncated to fit in 4-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\152\stopwatch\src\counter.v" Line 46: Result of 6-bit expression is truncated to fit in 5-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\152\stopwatch\src\counter.v" Line 51: Result of 6-bit expression is truncated to fit in 5-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\152\stopwatch\src\counter.v" Line 58: Result of 6-bit expression is truncated to fit in 5-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\152\stopwatch\src\counter.v" Line 64: Result of 6-bit expression is truncated to fit in 5-bit target.
-WARNING:HDLCompiler:634 - "C:\Users\152\stopwatch\src\counter.v" Line 19: Net <btn_reset> does not have a driver.
+WARNING:HDLCompiler:413 - "C:\Users\152\stopwatch\src\counter.v" Line 49: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\152\stopwatch\src\counter.v" Line 54: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\152\stopwatch\src\counter.v" Line 61: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\152\stopwatch\src\counter.v" Line 67: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:634 - "C:\Users\152\stopwatch\src\counter.v" Line 20: Net <btn_reset> does not have a driver.
 WARNING:Xst:2972 - "C:\Users\152\stopwatch\src\top.v" line 14. All outputs of instance <db1> of block <debounce> are unconnected in block <top>. Underlying logic will be removed.
 
 =========================================================================
@@ -191,19 +191,24 @@ Unit <debounce> synthesized.
 
 Synthesizing Unit <counter>.
     Related source file is "C:\Users\152\stopwatch\src\counter.v".
-INFO:Xst:3210 - "C:\Users\152\stopwatch\src\counter.v" line 19: Output port <out2> of the instance <clkdiv> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\152\stopwatch\src\counter.v" line 20: Output port <out2> of the instance <clkdiv> is unconnected or connected to loadless signal.
 WARNING:Xst:653 - Signal <btn_reset> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Found 5-bit register for signal <min_r>.
     Found 5-bit register for signal <sec_l>.
     Found 5-bit register for signal <sec_r>.
     Found 5-bit register for signal <min_l>.
-    Found 5-bit adder for signal <_n0108> created at line 46.
-    Found 5-bit adder for signal <sec_l[4]_GND_3_o_add_14_OUT> created at line 51.
-    Found 5-bit adder for signal <min_r[4]_GND_3_o_add_18_OUT> created at line 58.
-    Found 5-bit adder for signal <min_l[4]_GND_3_o_add_23_OUT> created at line 64.
+    Found 5-bit adder for signal <sec_r[4]_GND_3_o_add_17_OUT> created at line 49.
+    Found 5-bit adder for signal <sec_l[4]_GND_3_o_add_19_OUT> created at line 54.
+    Found 5-bit adder for signal <min_r[4]_GND_3_o_add_23_OUT> created at line 61.
+    Found 5-bit adder for signal <min_l[4]_GND_3_o_add_28_OUT> created at line 67.
+    Found 4-bit comparator greater for signal <n0003> created at line 40
+    Found 5-bit comparator lessequal for signal <n0023> created at line 52
+    Found 5-bit comparator lessequal for signal <n0028> created at line 58
+    Found 5-bit comparator greater for signal <n0034> created at line 65
     Summary:
 	inferred   4 Adder/Subtractor(s).
 	inferred  20 D-type flip-flop(s).
+	inferred   4 Comparator(s).
 	inferred   6 Multiplexer(s).
 Unit <counter> synthesized.
 
@@ -277,9 +282,12 @@ Macro Statistics
  7-bit register                                        : 2
 # Latches                                              : 32
  1-bit latch                                           : 32
-# Comparators                                          : 2
+# Comparators                                          : 6
  1-bit comparator equal                                : 1
  24-bit comparator greater                             : 1
+ 4-bit comparator greater                              : 1
+ 5-bit comparator greater                              : 1
+ 5-bit comparator lessequal                            : 2
 # Multiplexers                                         : 76
  1-bit 2-to-1 multiplexer                              : 68
  3-bit 2-to-1 multiplexer                              : 1
@@ -341,9 +349,12 @@ Macro Statistics
  5-bit up counter                                      : 1
 # Registers                                            : 37
  Flip-Flops                                            : 37
-# Comparators                                          : 2
+# Comparators                                          : 6
  1-bit comparator equal                                : 1
  24-bit comparator greater                             : 1
+ 4-bit comparator greater                              : 1
+ 5-bit comparator greater                              : 1
+ 5-bit comparator lessequal                            : 2
 # Multiplexers                                         : 74
  1-bit 2-to-1 multiplexer                              : 68
  5-bit 2-to-1 multiplexer                              : 5
@@ -383,6 +394,9 @@ WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <db2/count_19> has a
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <db2/count_18> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <db2/count_20> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <db2/count_17> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <counter/min_r_4> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <counter/sec_r_4> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <counter/sec_l_4> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
 INFO:Xst:2261 - The FF/Latch <counter/clkdiv/out1_0> in Unit <top> is equivalent to the following 3 FFs/Latches, which will be removed : <counter/clkdiv/outadj_0> <counter/clkdiv/out7seg_0> <counter/clkdiv/out2_0> 
 INFO:Xst:2261 - The FF/Latch <counter/clkdiv/out1_1> in Unit <top> is equivalent to the following 3 FFs/Latches, which will be removed : <counter/clkdiv/outadj_1> <counter/clkdiv/out7seg_1> <counter/clkdiv/out2_1> 
 INFO:Xst:2261 - The FF/Latch <counter/clkdiv/out1_2> in Unit <top> is equivalent to the following 3 FFs/Latches, which will be removed : <counter/clkdiv/outadj_2> <counter/clkdiv/out7seg_2> <counter/clkdiv/out2_2> 
@@ -395,6 +409,7 @@ INFO:Xst:2261 - The FF/Latch <counter/clkdiv/out1_7> in Unit <top> is equivalent
 Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block top, actual ratio is 3.
+FlipFlop db2/mydest has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -402,8 +417,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 128
- Flip-Flops                                            : 128
+# Registers                                            : 126
+ Flip-Flops                                            : 126
 
 =========================================================================
 
@@ -426,24 +441,24 @@ Top Level Output File Name         : top.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 519
+# BELS                             : 508
 #      GND                         : 1
 #      INV                         : 6
 #      LUT1                        : 109
-#      LUT2                        : 28
-#      LUT3                        : 29
-#      LUT4                        : 42
-#      LUT5                        : 23
-#      LUT6                        : 79
+#      LUT2                        : 26
+#      LUT3                        : 30
+#      LUT4                        : 36
+#      LUT5                        : 14
+#      LUT6                        : 81
 #      MUXCY                       : 109
-#      MUXF7                       : 1
+#      MUXF7                       : 4
 #      VCC                         : 1
 #      XORCY                       : 91
-# FlipFlops/Latches                : 156
-#      FD                          : 69
+# FlipFlops/Latches                : 154
+#      FD                          : 57
 #      FDE                         : 9
 #      FDR                         : 44
-#      FDRE                        : 2
+#      FDRE                        : 12
 #      FDSE                        : 4
 #      LD                          : 28
 # Clock Buffers                    : 1
@@ -459,16 +474,16 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             156  out of  18224     0%  
- Number of Slice LUTs:                  316  out of   9112     3%  
-    Number used as Logic:               316  out of   9112     3%  
+ Number of Slice Registers:             154  out of  18224     0%  
+ Number of Slice LUTs:                  302  out of   9112     3%  
+    Number used as Logic:               302  out of   9112     3%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    317
-   Number with an unused Flip Flop:     161  out of    317    50%  
-   Number with an unused LUT:             1  out of    317     0%  
-   Number of fully used LUT-FF pairs:   155  out of    317    48%  
-   Number of unique control sets:        10
+ Number of LUT Flip Flop pairs used:    305
+   Number with an unused Flip Flop:     151  out of    305    49%  
+   Number with an unused LUT:             3  out of    305     0%  
+   Number of fully used LUT-FF pairs:   151  out of    305    49%  
+   Number of unique control sets:        12
 
 IO Utilization: 
  Number of IOs:                          42
@@ -498,7 +513,7 @@ Clock Information:
 ----------------------------------------------------------------+--------------------------------------------+-------+
 Clock Signal                                                    | Clock buffer(FF name)                      | Load  |
 ----------------------------------------------------------------+--------------------------------------------+-------+
-clk                                                             | BUFGP                                      | 128   |
+clk                                                             | BUFGP                                      | 126   |
 counter/display/segment0/_n0032(counter/display/segment0/out1:O)| NONE(*)(counter/display/segment0/storage_3)| 7     |
 counter/display/segment1/_n0032(counter/display/segment1/out1:O)| NONE(*)(counter/display/segment1/storage_3)| 7     |
 counter/display/segment2/_n0032(counter/display/segment2/out1:O)| NONE(*)(counter/display/segment2/storage_3)| 7     |
@@ -518,7 +533,7 @@ Timing Summary:
 Speed Grade: -3
 
    Minimum period: 5.856ns (Maximum Frequency: 170.756MHz)
-   Minimum input arrival time before clock: 6.688ns
+   Minimum input arrival time before clock: 6.112ns
    Maximum output required time after clock: 3.634ns
    Maximum combinational path delay: No path found
 
@@ -529,7 +544,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
   Clock period: 5.856ns (frequency: 170.756MHz)
-  Total number of paths / destination ports: 7305 / 192
+  Total number of paths / destination ports: 7346 / 210
 -------------------------------------------------------------------------
 Delay:               5.856ns (Levels of Logic = 4)
   Source:            counter/clkdiv/out1_1 (FF)
@@ -553,26 +568,25 @@ Delay:               5.856ns (Levels of Logic = 4)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 179 / 26
+  Total number of paths / destination ports: 288 / 43
 -------------------------------------------------------------------------
-Offset:              6.688ns (Levels of Logic = 5)
+Offset:              6.112ns (Levels of Logic = 4)
   Source:            sw<7> (PAD)
-  Destination:       counter/min_l_1 (FF)
+  Destination:       counter/min_r_3 (FF)
   Destination Clock: clk rising
 
-  Data Path: sw<7> to counter/min_l_1
+  Data Path: sw<7> to counter/min_r_3
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            51   1.222   1.783  sw_7_IBUF (sw_7_IBUF)
-     LUT3:I0->O            3   0.205   0.898  counter/_n0124_SW0_SW0 (N13)
-     LUT5:I1->O            5   0.203   1.059  counter/_n0124_SW21 (N5)
-     LUT5:I0->O            1   0.203   0.808  counter/_n0144_inv1_SW5 (N22)
-     LUT6:I3->O            1   0.205   0.000  counter/min_l_1_rstpot (counter/min_l_1_rstpot)
-     FD:D                      0.102          counter/min_l_1
+     IBUF:I->O            37   1.222   1.727  sw_7_IBUF (sw_7_IBUF)
+     LUT6:I0->O            1   0.203   0.580  counter/GND_3_o_paused_AND_19_o1 (counter/GND_3_o_paused_AND_19_o1)
+     LUT5:I4->O           10   0.205   0.857  counter/GND_3_o_paused_AND_19_o6 (counter/GND_3_o_paused_AND_19_o)
+     LUT6:I5->O            4   0.205   0.683  counter/_n0127 (counter/_n0127)
+     FDRE:R                    0.430          counter/min_r_0
     ----------------------------------------
-    Total                      6.688ns (2.140ns logic, 4.548ns route)
-                                       (32.0% logic, 68.0% route)
+    Total                      6.112ns (2.265ns logic, 3.847ns route)
+                                       (37.1% logic, 62.9% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
@@ -615,7 +629,7 @@ Clock to Setup on destination clock counter/display/segment0/_n0032
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |         |         |    1.916|         |
+clk            |         |         |    1.892|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock counter/display/segment1/_n0032
@@ -623,7 +637,7 @@ Clock to Setup on destination clock counter/display/segment1/_n0032
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |         |         |    1.916|         |
+clk            |         |         |    1.867|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock counter/display/segment2/_n0032
@@ -631,7 +645,7 @@ Clock to Setup on destination clock counter/display/segment2/_n0032
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |         |         |    1.984|         |
+clk            |         |         |    1.962|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock counter/display/segment3/_n0032
@@ -639,20 +653,20 @@ Clock to Setup on destination clock counter/display/segment3/_n0032
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |         |         |    1.916|         |
+clk            |         |         |    1.984|         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 10.00 secs
-Total CPU time to Xst completion: 9.18 secs
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 8.13 secs
  
 --> 
 
-Total memory usage is 259476 kilobytes
+Total memory usage is 260052 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   50 (   0 filtered)
+Number of warnings :   53 (   0 filtered)
 Number of infos    :   25 (   0 filtered)
 

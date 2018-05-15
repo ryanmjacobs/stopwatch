@@ -37,30 +37,32 @@ module counter(
             sec_r = 0;
 	    end else if (btn_set_pause && adj_sel != 5) begin
 		    // adjust
-		    case (adj_sel)
-              3: min_l = adj_val;
-              2: min_r = adj_val;
-              1: sec_l = adj_val;
-              0: sec_r = adj_val;
-            endcase
+            if (adj_val <= 9) begin
+		      case (adj_sel)
+                3: min_l = adj_val;
+                2: min_r = adj_val;
+                1: sec_l = adj_val;
+                0: sec_r = adj_val;
+              endcase
+            end
         end else if (out1 == 0 && !paused) begin
             sec_r = sec_r + 1;
 
             // seconds, ones overflow
-            if (sec_r == 10) begin
+            if (sec_r >= 10) begin
                 sec_r = 0;
                 sec_l = sec_l + 1;
             end
 
             // seconds, tens overflow
-            if (sec_l == 6) begin
+            if (sec_l >= 6) begin
                 sec_l = 0;
                 sec_r = 0;
                 min_r = min_r + 1;
             end
 
             // minutes, ones overflow
-            if (min_r == 10) begin
+            if (min_r >= 10) begin
                 min_r = 0;
                 min_l = min_l + 1;
             end

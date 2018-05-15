@@ -11,7 +11,7 @@ module top(
     wire btn_set_pause;
     reg btnRight = 0; // temp
     reg btnCenter = 0; // temp
-    debounce db1(clk, btnl,  btn_reset);
+    debounce db1(clk, btnl, btn_reset);
     debounce db2(clk, btnr, btn_set_pause);
 	
     // slider switches
@@ -29,7 +29,7 @@ module top(
     assign adj_sel = adj ? sel : 3'd5; // 5+ means void
 
 	wire rst;
-    assign rst = 0;    
+    assign rst = 0;
     counter counter(clk, rst, paused,
                     adj, adj_sel, num,
 				    Led, seg, an);

@@ -5,7 +5,7 @@ C:\Xilinx\14.6\ISE_DS\ISE\.
    "top" is an NCD, version 3.2, device xc6slx16, package csg324, speed -3
 Opened constraints file top.pcf.
 
-Tue May 15 10:51:18 2018
+Tue May 15 11:09:25 2018
 
 C:\Xilinx\14.6\ISE_DS\ISE\bin\nt64\unwrapped\bitgen.exe -intstyle ise -w -g DebugBitstream:No -g Binary:no -g CRC:Enable -g Reset_on_err:No -g ConfigRate:2 -g ProgPin:PullUp -g TckPin:PullUp -g TdiPin:PullUp -g TdoPin:PullUp -g TmsPin:PullUp -g UnusedPin:PullDown -g UserID:0xFFFFFFFF -g ExtMasterCclk_en:No -g SPI_buswidth:1 -g TIMER_CFG:0xFFFF -g multipin_wakeup:No -g StartUpClk:CClk -g DONE_cycle:4 -g GTS_cycle:5 -g GWE_cycle:6 -g LCK_cycle:NoWait -g Security:None -g DonePipe:Yes -g DriveDone:No -g en_sw_gsr:No -g drive_awake:No -g sw_clk:Startupclk -g sw_gwe_cycle:5 -g sw_gts_cycle:4 top.ncd 
 
@@ -129,7 +129,7 @@ There were 0 CONFIG constraint(s) processed from top.pcf.
 
 Running DRC.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   counter/display/segment0/_n0032 is sourced by a combinatorial pin. This is
+   counter/display/segment3/_n0032 is sourced by a combinatorial pin. This is
    not good design practice. Use the CE pin to control the loading of data into
    the flip-flop.
 DRC detected 0 errors and 1 warnings.  Please see the previously displayed
@@ -139,3 +139,6 @@ WARNING:Security:42 - Your software subscription period has lapsed. Your current
 version of Xilinx tools will continue to function, but you no longer qualify for
 Xilinx software updates or new releases.
 
+Creating bit map...
+Saving bit stream in "top.bit".
+Bitstream generation is complete.

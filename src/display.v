@@ -30,8 +30,10 @@ module display(
         panel = panel + 1'b1;
         //an = 1 << panel;
 		an = 4'b0101;
-        Led = segments[0];
-        seg = segments[0];
+        Led = segments[3];
+        seg = segments[3];
+        //Led = panel;
+        //seg = panel;
     end
     
 /*

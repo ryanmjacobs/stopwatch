@@ -10,40 +10,40 @@ Target Device  : xc6slx16
 Target Package : csg324
 Target Speed   : -3
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Tue May 15 10:50:47 2018
+Mapped Date    : Tue May 15 11:08:54 2018
 
 Design Summary
 --------------
 Number of errors:      0
 Number of warnings:    1
 Slice Logic Utilization:
-  Number of Slice Registers:                    94 out of  18,224    1%
-    Number used as Flip Flops:                  87
+  Number of Slice Registers:                    62 out of  18,224    1%
+    Number used as Flip Flops:                  55
     Number used as Latches:                      7
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                        136 out of   9,112    1%
-    Number used as logic:                      133 out of   9,112    1%
-      Number using O6 output only:              67
-      Number using O5 output only:              55
-      Number using O5 and O6:                   11
+  Number of Slice LUTs:                         83 out of   9,112    1%
+    Number used as logic:                       81 out of   9,112    1%
+      Number using O6 output only:              34
+      Number using O5 output only:              40
+      Number using O5 and O6:                    7
       Number used as ROM:                        0
     Number used as Memory:                       0 out of   2,176    0%
-    Number used exclusively as route-thrus:      3
+    Number used exclusively as route-thrus:      2
       Number with same-slice register load:      0
-      Number with same-slice carry load:         3
+      Number with same-slice carry load:         2
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                    46 out of   2,278    2%
-  Number of MUXCYs used:                        68 out of   4,556    1%
-  Number of LUT Flip Flop pairs used:          140
-    Number with an unused Flip Flop:            46 out of     140   32%
-    Number with an unused LUT:                   4 out of     140    2%
-    Number of fully used LUT-FF pairs:          90 out of     140   64%
-    Number of unique control sets:               6
+  Number of occupied Slices:                    27 out of   2,278    1%
+  Number of MUXCYs used:                        48 out of   4,556    1%
+  Number of LUT Flip Flop pairs used:           88
+    Number with an unused Flip Flop:            26 out of      88   29%
+    Number with an unused LUT:                   5 out of      88    5%
+    Number of fully used LUT-FF pairs:          57 out of      88   64%
+    Number of unique control sets:               4
     Number of slice register sites lost
-      to control set restrictions:              26 out of  18,224    1%
+      to control set restrictions:              10 out of  18,224    1%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -83,7 +83,7 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of SUSPEND_SYNCs:                       0 out of       1    0%
 
-Average Fanout of Non-Clock Nets:                2.95
+Average Fanout of Non-Clock Nets:                2.52
 
 Peak Memory Usage:  364 MB
 Total REAL time to MAP completion:  7 secs 
@@ -114,7 +114,7 @@ WARNING:Security:42 - Your software subscription period has lapsed. Your current
 version of Xilinx tools will continue to function, but you no longer qualify for
 Xilinx software updates or new releases.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   counter/display/segment0/_n0032 is sourced by a combinatorial pin. This is
+   counter/display/segment3/_n0032 is sourced by a combinatorial pin. This is
    not good design practice. Use the CE pin to control the loading of data into
    the flip-flop.
 
@@ -122,7 +122,7 @@ Section 3 - Informational
 -------------------------
 INFO:Security:54 - 'xc6slx16' is a WebPack part.
 INFO:LIT:243 - Logical network seconds<12> has no load.
-INFO:LIT:395 - The above info message is repeated 13 more times for the
+INFO:LIT:395 - The above info message is repeated 21 more times for the
    following (max. 5 shown):
    seconds<11>,
    seconds<10>,

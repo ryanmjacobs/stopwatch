@@ -30,15 +30,17 @@ module top(
 
     // pause button
     wire paused;
-    assign paused = (!adj && btn_set_pause);
+    //assign paused = (!adj && btn_set_pause);
+    assign paused = 0;
 
     // adjust registers
     wire [2:0] adj_sel;
     reg [3:0] adj_val = 5;
     assign adj_sel = adj ? sel : 3'd5; // 5+ means void
 
-	 
-    counter counter(clk, out1, btn_reset, paused,
+	wire rst;
+    assign rst = 0;    
+    counter counter(clk, out1, rst, paused,
                     adj, adj_sel, num,
 				    Led, seg, an);
 endmodule

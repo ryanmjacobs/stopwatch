@@ -23,6 +23,7 @@ module counter(
      
     always @(posedge clk) begin
 	    // reset
+        /*
         if (rst) begin
             min_l = 0;
             min_r = 0;
@@ -36,7 +37,8 @@ module counter(
             2: sec_l = adj_val;
             3: sec_r = adj_val;
           endcase
-        end else if (out1 == 0 && !paused) begin
+          */
+        if (out1 == 0) begin// && !paused) begin
             sec_r = sec_r + 1;
 
             // seconds, ones overflow

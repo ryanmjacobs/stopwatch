@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Reading design: top.prj
 
@@ -124,7 +124,6 @@ Parsing module <top>.
 Elaborating module <top>.
 
 Elaborating module <debounce>.
-WARNING:HDLCompiler:413 - "C:\Users\152\stopwatch\src\debounce.v" Line 20: Result of 25-bit expression is truncated to fit in 24-bit target.
 
 Elaborating module <counter>.
 
@@ -174,17 +173,17 @@ Unit <top> synthesized.
 
 Synthesizing Unit <debounce>.
     Related source file is "C:\Users\152\stopwatch\src\debounce.v".
-        CLK_FREQ_KHZ = 100000
-        threshold = 100000
-    Found 24-bit register for signal <count>.
+        CLK_FREQ_KHZ = 10000
+        threshold = 10000
+    Found 33-bit register for signal <count>.
     Found 1-bit register for signal <mydest>.
     Found 2-bit register for signal <state>.
-    Found 24-bit adder for signal <count[23]_GND_2_o_add_1_OUT> created at line 20.
+    Found 33-bit adder for signal <count[32]_GND_2_o_add_1_OUT> created at line 20.
     Found 1-bit comparator equal for signal <n0001> created at line 22
-    Found 24-bit comparator greater for signal <n0003> created at line 25
+    Found 33-bit comparator greater for signal <n0003> created at line 25
     Summary:
 	inferred   1 Adder/Subtractor(s).
-	inferred  27 D-type flip-flop(s).
+	inferred  36 D-type flip-flop(s).
 	inferred   2 Comparator(s).
 Unit <debounce> synthesized.
 
@@ -265,17 +264,17 @@ Macro Statistics
 # Adders/Subtractors                                   : 11
  18-bit adder                                          : 1
  2-bit adder                                           : 1
- 24-bit adder                                          : 2
  26-bit adder                                          : 2
  27-bit adder                                          : 1
+ 33-bit adder                                          : 2
  5-bit adder                                           : 4
 # Registers                                            : 20
  1-bit register                                        : 4
  18-bit register                                       : 1
  2-bit register                                        : 3
- 24-bit register                                       : 2
  26-bit register                                       : 2
  27-bit register                                       : 1
+ 33-bit register                                       : 2
  4-bit register                                        : 1
  5-bit register                                        : 4
  7-bit register                                        : 2
@@ -283,7 +282,7 @@ Macro Statistics
  1-bit latch                                           : 32
 # Comparators                                          : 8
  1-bit comparator equal                                : 2
- 24-bit comparator greater                             : 2
+ 33-bit comparator greater                             : 2
  4-bit comparator greater                              : 1
  5-bit comparator greater                              : 1
  5-bit comparator lessequal                            : 2
@@ -342,15 +341,15 @@ Macro Statistics
 # Counters                                             : 8
  18-bit up counter                                     : 1
  2-bit up counter                                      : 1
- 24-bit up counter                                     : 2
  26-bit up counter                                     : 2
  27-bit up counter                                     : 1
+ 33-bit up counter                                     : 2
  5-bit up counter                                      : 1
 # Registers                                            : 41
  Flip-Flops                                            : 41
 # Comparators                                          : 8
  1-bit comparator equal                                : 2
- 24-bit comparator greater                             : 2
+ 33-bit comparator greater                             : 2
  4-bit comparator greater                              : 1
  5-bit comparator greater                              : 1
  5-bit comparator lessequal                            : 2
@@ -388,22 +387,46 @@ Optimizing unit <clkdiv> ...
 Optimizing unit <display> ...
 
 Optimizing unit <segment> ...
-WARNING:Xst:1293 - FF/Latch <db2/count_22> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <db2/count_21> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <db2/count_23> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <db2/count_19> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <db2/count_18> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <db2/count_20> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <db2/count_17> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <db1/count_31> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <db1/count_30> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <db1/count_29> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <db1/count_28> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <db1/count_27> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <db1/count_25> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <db1/count_24> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <db1/count_26> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <db1/count_23> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <db1/count_22> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <db1/count_21> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <db1/count_23> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <db1/count_20> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <db1/count_19> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <db1/count_18> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <db1/count_20> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <db1/count_16> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <db1/count_15> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <db1/count_17> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <db1/count_14> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <counter/min_r_4> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <counter/sec_l_4> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <db2/count_32> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <db2/count_31> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <db2/count_30> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <db2/count_29> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <db2/count_28> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <db2/count_27> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <db2/count_25> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <db2/count_24> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <db2/count_26> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <db2/count_23> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <db2/count_22> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <db2/count_21> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <db2/count_20> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <db2/count_19> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <db2/count_18> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <db2/count_16> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <db2/count_15> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <db2/count_17> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <db2/count_14> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <db1/count_32> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
 INFO:Xst:2261 - The FF/Latch <counter/clkdiv/out1_0> in Unit <top> is equivalent to the following 3 FFs/Latches, which will be removed : <counter/clkdiv/outadj_0> <counter/clkdiv/out7seg_0> <counter/clkdiv/out2_0> 
 INFO:Xst:2261 - The FF/Latch <counter/clkdiv/out1_1> in Unit <top> is equivalent to the following 3 FFs/Latches, which will be removed : <counter/clkdiv/outadj_1> <counter/clkdiv/out7seg_1> <counter/clkdiv/out2_1> 
 INFO:Xst:2261 - The FF/Latch <counter/clkdiv/out1_2> in Unit <top> is equivalent to the following 3 FFs/Latches, which will be removed : <counter/clkdiv/outadj_2> <counter/clkdiv/out7seg_2> <counter/clkdiv/out2_2> 
@@ -423,8 +446,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 146
- Flip-Flops                                            : 146
+# Registers                                            : 140
+ Flip-Flops                                            : 140
 
 =========================================================================
 
@@ -447,25 +470,25 @@ Top Level Output File Name         : top.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 576
+# BELS                             : 592
 #      GND                         : 1
 #      INV                         : 8
-#      LUT1                        : 125
+#      LUT1                        : 119
 #      LUT2                        : 26
-#      LUT3                        : 33
-#      LUT4                        : 48
-#      LUT5                        : 15
-#      LUT6                        : 84
-#      MUXCY                       : 125
-#      MUXF7                       : 2
+#      LUT3                        : 37
+#      LUT4                        : 67
+#      LUT5                        : 18
+#      LUT6                        : 79
+#      MUXCY                       : 133
+#      MUXF7                       : 1
 #      VCC                         : 1
-#      XORCY                       : 108
-# FlipFlops/Latches                : 174
-#      FD                          : 65
+#      XORCY                       : 102
+# FlipFlops/Latches                : 168
+#      FD                          : 86
 #      FD_1                        : 1
 #      FDE                         : 9
-#      FDR                         : 66
-#      FDRE                        : 1
+#      FDR                         : 32
+#      FDRE                        : 8
 #      FDSE                        : 4
 #      LD                          : 28
 # Clock Buffers                    : 1
@@ -481,16 +504,16 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             174  out of  18224     0%  
- Number of Slice LUTs:                  339  out of   9112     3%  
-    Number used as Logic:               339  out of   9112     3%  
+ Number of Slice Registers:             168  out of  18224     0%  
+ Number of Slice LUTs:                  354  out of   9112     3%  
+    Number used as Logic:               354  out of   9112     3%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    342
-   Number with an unused Flip Flop:     168  out of    342    49%  
-   Number with an unused LUT:             3  out of    342     0%  
-   Number of fully used LUT-FF pairs:   171  out of    342    50%  
-   Number of unique control sets:        13
+ Number of LUT Flip Flop pairs used:    359
+   Number with an unused Flip Flop:     191  out of    359    53%  
+   Number with an unused LUT:             5  out of    359     1%  
+   Number of fully used LUT-FF pairs:   163  out of    359    45%  
+   Number of unique control sets:        12
 
 IO Utilization: 
  Number of IOs:                          42
@@ -521,7 +544,7 @@ Clock Information:
 Clock Signal                                                    | Clock buffer(FF name)                      | Load  |
 ----------------------------------------------------------------+--------------------------------------------+-------+
 db2/mydest                                                      | NONE(paused_toggle)                        | 1     |
-clk                                                             | BUFGP                                      | 145   |
+clk                                                             | BUFGP                                      | 139   |
 counter/display/segment0/_n0032(counter/display/segment0/out1:O)| NONE(*)(counter/display/segment0/storage_3)| 7     |
 counter/display/segment1/_n0032(counter/display/segment1/out1:O)| NONE(*)(counter/display/segment1/storage_3)| 7     |
 counter/display/segment2/_n0032(counter/display/segment2/out1:O)| NONE(*)(counter/display/segment2/storage_3)| 7     |
@@ -541,7 +564,7 @@ Timing Summary:
 Speed Grade: -3
 
    Minimum period: 5.856ns (Maximum Frequency: 170.756MHz)
-   Minimum input arrival time before clock: 6.179ns
+   Minimum input arrival time before clock: 6.294ns
    Maximum output required time after clock: 3.634ns
    Maximum combinational path delay: No path found
 
@@ -574,7 +597,7 @@ Delay:               1.950ns (Levels of Logic = 1)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
   Clock period: 5.856ns (frequency: 170.756MHz)
-  Total number of paths / destination ports: 7755 / 228
+  Total number of paths / destination ports: 7713 / 202
 -------------------------------------------------------------------------
 Delay:               5.856ns (Levels of Logic = 4)
   Source:            counter/clkdiv/out1_1 (FF)
@@ -598,26 +621,25 @@ Delay:               5.856ns (Levels of Logic = 4)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 294 / 22
+  Total number of paths / destination ports: 294 / 36
 -------------------------------------------------------------------------
-Offset:              6.179ns (Levels of Logic = 5)
+Offset:              6.294ns (Levels of Logic = 4)
   Source:            sw<7> (PAD)
-  Destination:       counter/sec_l_3 (FF)
+  Destination:       counter/sec_r_3 (FF)
   Destination Clock: clk rising
 
-  Data Path: sw<7> to counter/sec_l_3
+  Data Path: sw<7> to counter/sec_r_3
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O            29   1.222   1.614  sw_7_IBUF (sw_7_IBUF)
      LUT6:I0->O            1   0.203   0.684  counter/GND_3_o_paused_AND_19_o1 (counter/GND_3_o_paused_AND_19_o1)
-     LUT5:I3->O            9   0.203   0.830  counter/GND_3_o_paused_AND_19_o6 (counter/GND_3_o_paused_AND_19_o)
-     LUT6:I5->O            4   0.205   0.912  counter/_n0163_inv11 (counter/_n0163_inv1)
-     LUT4:I1->O            1   0.205   0.000  counter/sec_l_3_rstpot (counter/sec_l_3_rstpot)
-     FD:D                      0.102          counter/sec_l_3
+     LUT5:I3->O            9   0.203   0.934  counter/GND_3_o_paused_AND_19_o6 (counter/GND_3_o_paused_AND_19_o)
+     LUT5:I3->O            8   0.203   0.802  counter/Reset_OR_DriverANDClockEnable51 (counter/Reset_OR_DriverANDClockEnable5)
+     FDRE:R                    0.430          counter/sec_r_0
     ----------------------------------------
-    Total                      6.179ns (2.140ns logic, 4.039ns route)
-                                       (34.6% logic, 65.4% route)
+    Total                      6.294ns (2.261ns logic, 4.033ns route)
+                                       (35.9% logic, 64.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
@@ -653,7 +675,7 @@ counter/display/segment0/_n0032|         |    1.613|         |         |
 counter/display/segment1/_n0032|         |    1.385|         |         |
 counter/display/segment2/_n0032|         |    1.630|         |         |
 counter/display/segment3/_n0032|         |    1.487|         |         |
-db2/mydest                     |         |    4.751|         |         |
+db2/mydest                     |         |    4.866|         |         |
 -------------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock counter/display/segment0/_n0032
@@ -661,7 +683,7 @@ Clock to Setup on destination clock counter/display/segment0/_n0032
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |         |         |    1.916|         |
+clk            |         |         |    1.892|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock counter/display/segment1/_n0032
@@ -669,7 +691,7 @@ Clock to Setup on destination clock counter/display/segment1/_n0032
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |         |         |    1.939|         |
+clk            |         |         |    1.916|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock counter/display/segment2/_n0032
@@ -699,14 +721,14 @@ db2/mydest     |         |         |    1.950|         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 10.00 secs
-Total CPU time to Xst completion: 9.40 secs
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 9.46 secs
  
 --> 
 
-Total memory usage is 259860 kilobytes
+Total memory usage is 259604 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   59 (   0 filtered)
+Number of warnings :   82 (   0 filtered)
 Number of infos    :   24 (   0 filtered)
 

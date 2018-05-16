@@ -1,7 +1,7 @@
 Release 14.6 Drc P.68d (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Wed May 16 10:09:46 2018
+Wed May 16 10:16:16 2018
 
 drc -z top.ncd top.pcf
 
@@ -13,6 +13,9 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net
    counter/display/segment0/_n0032 is sourced by a combinatorial pin. This is
    not good design practice. Use the CE pin to control the loading of data into
    the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net db2/mydest is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
    counter/display/segment2/_n0032 is sourced by a combinatorial pin. This is
    not good design practice. Use the CE pin to control the loading of data into
@@ -21,5 +24,5 @@ WARNING:PhysDesignRules:372 - Gated clock. Clock net
    counter/display/segment1/_n0032 is sourced by a combinatorial pin. This is
    not good design practice. Use the CE pin to control the loading of data into
    the flip-flop.
-DRC detected 0 errors and 4 warnings.  Please see the previously displayed
+DRC detected 0 errors and 5 warnings.  Please see the previously displayed
 individual error or warning messages for more details.

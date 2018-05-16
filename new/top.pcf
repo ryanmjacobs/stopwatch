@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.68d on Wed May 16 10:09:20 2018
+// Written by: Map P.68d on Wed May 16 10:15:58 2018
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -32,67 +32,66 @@ COMP "seg<3>" LOCATE = SITE "U18" LEVEL 1;
 COMP "seg<4>" LOCATE = SITE "M14" LEVEL 1;
 COMP "seg<5>" LOCATE = SITE "N14" LEVEL 1;
 COMP "seg<6>" LOCATE = SITE "L14" LEVEL 1;
-TIMEGRP sys_clk_pin = BEL "db2/count_0" BEL "db2/count_16" BEL "db2/count_15"
-        BEL "db2/count_14" BEL "db2/count_13" BEL "db2/count_12" BEL
-        "db2/count_11" BEL "db2/count_9" BEL "db2/count_8" BEL "db2/count_10"
-        BEL "db2/count_7" BEL "db2/count_6" BEL "db2/count_5" BEL
-        "db2/count_4" BEL "db2/count_2" BEL "db2/count_1" BEL "db2/count_3"
-        BEL "db2/state_1" BEL "db2/state_0" BEL "db1/count_0" BEL
-        "db1/count_16" BEL "db1/count_15" BEL "db1/count_14" BEL
-        "db1/count_13" BEL "db1/count_12" BEL "db1/count_11" BEL "db1/count_9"
-        BEL "db1/count_8" BEL "db1/count_10" BEL "db1/count_7" BEL
-        "db1/count_6" BEL "db1/count_5" BEL "db1/count_4" BEL "db1/count_2"
-        BEL "db1/count_1" BEL "db1/count_3" BEL "db1/state_1" BEL
-        "db1/state_0" BEL "counter/min_r_3" BEL "counter/clkdiv/out1_26" BEL
-        "counter/clkdiv/out1_25" BEL "counter/clkdiv/out1_24" BEL
-        "counter/clkdiv/out1_23" BEL "counter/clkdiv/out1_22" BEL
-        "counter/clkdiv/out1_21" BEL "counter/clkdiv/out1_20" BEL
-        "counter/clkdiv/out1_19" BEL "counter/clkdiv/out1_18" BEL
-        "counter/clkdiv/out1_17" BEL "counter/clkdiv/out1_16" BEL
-        "counter/clkdiv/out1_15" BEL "counter/clkdiv/out1_14" BEL
-        "counter/clkdiv/out1_13" BEL "counter/clkdiv/out1_12" BEL
-        "counter/clkdiv/out1_11" BEL "counter/clkdiv/out1_10" BEL
-        "counter/clkdiv/out1_9" BEL "counter/clkdiv/out1_8" BEL
-        "counter/clkdiv/out1_7" BEL "counter/clkdiv/out1_6" BEL
-        "counter/clkdiv/out1_5" BEL "counter/clkdiv/out1_4" BEL
-        "counter/clkdiv/out1_3" BEL "counter/clkdiv/out1_2" BEL
-        "counter/clkdiv/out1_1" BEL "counter/clkdiv/out1_0" BEL
-        "counter/display/panel_1" BEL "counter/display/panel_0" BEL
-        "counter/display/Led_6" BEL "counter/display/Led_5" BEL
-        "counter/display/Led_4" BEL "counter/display/Led_3" BEL
-        "counter/display/Led_2" BEL "counter/display/Led_1" BEL
-        "counter/display/Led_0" BEL "counter/display/an_3" BEL
-        "counter/display/an_2" BEL "counter/display/an_1" BEL
-        "counter/display/an_0" BEL "db2/mydest" BEL "db1/mydest" BEL
-        "counter/display/enabled" BEL "counter/min_l_1" BEL "counter/min_l_0"
-        BEL "counter/min_r_0" BEL "counter/min_l_4" BEL "counter/min_l_3" BEL
-        "counter/min_l_2" BEL "counter/min_r_2" BEL "counter/min_r_1" BEL
-        "counter/clkdiv/out2_25" BEL "counter/clkdiv/out2_24" BEL
-        "counter/clkdiv/out2_23" BEL "counter/clkdiv/out2_22" BEL
-        "counter/clkdiv/out2_21" BEL "counter/clkdiv/out2_20" BEL
-        "counter/clkdiv/out2_19" BEL "counter/clkdiv/out2_18" BEL
-        "counter/clkdiv/out2_17" BEL "counter/clkdiv/out2_16" BEL
-        "counter/clkdiv/out2_15" BEL "counter/clkdiv/out2_14" BEL
-        "counter/clkdiv/out2_13" BEL "counter/clkdiv/out2_12" BEL
-        "counter/clkdiv/out2_11" BEL "counter/clkdiv/out2_10" BEL
-        "counter/clkdiv/out2_9" BEL "counter/clkdiv/out2_8" BEL
-        "counter/clkdiv/out2_7" BEL "counter/clkdiv/outadj_25" BEL
-        "counter/clkdiv/outadj_24" BEL "counter/clkdiv/outadj_23" BEL
-        "counter/clkdiv/outadj_22" BEL "counter/clkdiv/outadj_21" BEL
-        "counter/clkdiv/outadj_20" BEL "counter/clkdiv/outadj_19" BEL
-        "counter/clkdiv/outadj_18" BEL "counter/clkdiv/outadj_17" BEL
-        "counter/clkdiv/outadj_16" BEL "counter/clkdiv/outadj_15" BEL
-        "counter/clkdiv/outadj_14" BEL "counter/clkdiv/outadj_13" BEL
-        "counter/clkdiv/outadj_12" BEL "counter/clkdiv/outadj_11" BEL
-        "counter/clkdiv/outadj_10" BEL "counter/clkdiv/outadj_9" BEL
-        "counter/clkdiv/outadj_8" BEL "counter/clkdiv/out7seg_17" BEL
-        "counter/clkdiv/out7seg_16" BEL "counter/clkdiv/out7seg_15" BEL
-        "counter/clkdiv/out7seg_14" BEL "counter/clkdiv/out7seg_13" BEL
-        "counter/clkdiv/out7seg_12" BEL "counter/clkdiv/out7seg_11" BEL
-        "counter/clkdiv/out7seg_10" BEL "counter/clkdiv/out7seg_9" BEL
-        "counter/clkdiv/out7seg_8" BEL "counter/sec_r_3" BEL "counter/sec_r_2"
-        BEL "counter/sec_r_1" BEL "counter/sec_r_0" BEL "counter/sec_l_3" BEL
+TIMEGRP sys_clk_pin = BEL "db2/state_1" BEL "db2/state_0" BEL "db1/state_1"
+        BEL "db1/state_0" BEL "counter/sec_r_3" BEL "counter/sec_r_2" BEL
+        "counter/sec_r_1" BEL "counter/sec_r_0" BEL "counter/sec_l_3" BEL
         "counter/sec_l_2" BEL "counter/sec_l_1" BEL "counter/sec_l_0" BEL
+        "counter/clkdiv/out1_26" BEL "counter/clkdiv/out1_25" BEL
+        "counter/clkdiv/out1_24" BEL "counter/clkdiv/out1_23" BEL
+        "counter/clkdiv/out1_22" BEL "counter/clkdiv/out1_21" BEL
+        "counter/clkdiv/out1_20" BEL "counter/clkdiv/out1_19" BEL
+        "counter/clkdiv/out1_18" BEL "counter/clkdiv/out1_17" BEL
+        "counter/clkdiv/out1_16" BEL "counter/clkdiv/out1_15" BEL
+        "counter/clkdiv/out1_14" BEL "counter/clkdiv/out1_13" BEL
+        "counter/clkdiv/out1_12" BEL "counter/clkdiv/out1_11" BEL
+        "counter/clkdiv/out1_10" BEL "counter/clkdiv/out1_9" BEL
+        "counter/clkdiv/out1_8" BEL "counter/clkdiv/out1_7" BEL
+        "counter/clkdiv/out1_6" BEL "counter/clkdiv/out1_5" BEL
+        "counter/clkdiv/out1_4" BEL "counter/clkdiv/out1_3" BEL
+        "counter/clkdiv/out1_2" BEL "counter/clkdiv/out1_1" BEL
+        "counter/clkdiv/out1_0" BEL "counter/display/panel_1" BEL
+        "counter/display/panel_0" BEL "counter/display/Led_6" BEL
+        "counter/display/Led_5" BEL "counter/display/Led_4" BEL
+        "counter/display/Led_3" BEL "counter/display/Led_2" BEL
+        "counter/display/Led_1" BEL "counter/display/Led_0" BEL
+        "counter/display/an_3" BEL "counter/display/an_2" BEL
+        "counter/display/an_1" BEL "counter/display/an_0" BEL
+        "counter/display/enabled" BEL "db2/count_0" BEL "db2/count_9" BEL
+        "db2/count_7" BEL "db2/count_6" BEL "db2/count_8" BEL "db2/count_5"
+        BEL "db2/count_4" BEL "db2/count_3" BEL "db2/count_2" BEL
+        "db2/count_1" BEL "db1/count_0" BEL "db1/count_9" BEL "db1/count_7"
+        BEL "db1/count_6" BEL "db1/count_8" BEL "db1/count_5" BEL
+        "db1/count_4" BEL "db1/count_3" BEL "db1/count_2" BEL "db1/count_1"
+        BEL "db2/count_10" BEL "db1/count_10" BEL "db2/count_11" BEL
+        "db1/count_11" BEL "db2/count_12" BEL "db1/count_12" BEL
+        "db2/count_13" BEL "db1/count_13" BEL "counter/min_l_1" BEL
+        "counter/min_l_0" BEL "counter/min_r_0" BEL "counter/min_l_4" BEL
+        "counter/min_l_3" BEL "counter/min_l_2" BEL "counter/min_r_2" BEL
+        "counter/min_r_1" BEL "db2/mydest" BEL "db1/mydest" BEL
+        "counter/min_r_3" BEL "counter/clkdiv/out2_25" BEL
+        "counter/clkdiv/out2_24" BEL "counter/clkdiv/out2_23" BEL
+        "counter/clkdiv/out2_22" BEL "counter/clkdiv/out2_21" BEL
+        "counter/clkdiv/out2_20" BEL "counter/clkdiv/out2_19" BEL
+        "counter/clkdiv/out2_18" BEL "counter/clkdiv/out2_17" BEL
+        "counter/clkdiv/out2_16" BEL "counter/clkdiv/out2_15" BEL
+        "counter/clkdiv/out2_14" BEL "counter/clkdiv/out2_13" BEL
+        "counter/clkdiv/out2_12" BEL "counter/clkdiv/out2_11" BEL
+        "counter/clkdiv/out2_10" BEL "counter/clkdiv/out2_9" BEL
+        "counter/clkdiv/out2_8" BEL "counter/clkdiv/out2_7" BEL
+        "counter/clkdiv/outadj_25" BEL "counter/clkdiv/outadj_24" BEL
+        "counter/clkdiv/outadj_23" BEL "counter/clkdiv/outadj_22" BEL
+        "counter/clkdiv/outadj_21" BEL "counter/clkdiv/outadj_20" BEL
+        "counter/clkdiv/outadj_19" BEL "counter/clkdiv/outadj_18" BEL
+        "counter/clkdiv/outadj_17" BEL "counter/clkdiv/outadj_16" BEL
+        "counter/clkdiv/outadj_15" BEL "counter/clkdiv/outadj_14" BEL
+        "counter/clkdiv/outadj_13" BEL "counter/clkdiv/outadj_12" BEL
+        "counter/clkdiv/outadj_11" BEL "counter/clkdiv/outadj_10" BEL
+        "counter/clkdiv/outadj_9" BEL "counter/clkdiv/outadj_8" BEL
+        "counter/clkdiv/out7seg_17" BEL "counter/clkdiv/out7seg_16" BEL
+        "counter/clkdiv/out7seg_15" BEL "counter/clkdiv/out7seg_14" BEL
+        "counter/clkdiv/out7seg_13" BEL "counter/clkdiv/out7seg_12" BEL
+        "counter/clkdiv/out7seg_11" BEL "counter/clkdiv/out7seg_10" BEL
+        "counter/clkdiv/out7seg_9" BEL "counter/clkdiv/out7seg_8" BEL
         "clk_BUFGP/BUFG";
 TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
 SCHEMATIC END;

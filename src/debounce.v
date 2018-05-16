@@ -1,10 +1,10 @@
 module debounce(input clk, input src, output reg mydest);
     // debounce threshold of 1 ms
     parameter CLK_FREQ_KHZ = 100_000;
-    parameter threshold = CLK_FREQ_KHZ;
+    parameter threshold = CLK_FREQ_KHZ/10;
 
     reg  [1:0] state;
-    reg [23:0] count;
+    reg [32:0] count;
 
     initial begin
         mydest <= src;

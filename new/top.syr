@@ -3,13 +3,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
+Total REAL time to Xst completion: 0.00 secs
 Total CPU time to Xst completion: 0.13 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
+Total REAL time to Xst completion: 0.00 secs
 Total CPU time to Xst completion: 0.13 secs
  
 --> Reading design: top.prj
@@ -151,8 +151,7 @@ Elaborating module <display>.
 Elaborating module <segment>.
 WARNING:HDLCompiler:413 - "C:\Users\152\stopwatch\src\display.v" Line 36: Result of 8-bit expression is truncated to fit in 7-bit target.
 WARNING:HDLCompiler:413 - "C:\Users\152\stopwatch\src\display.v" Line 37: Result of 8-bit expression is truncated to fit in 7-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\152\stopwatch\src\display.v" Line 40: Result of 32-bit expression is truncated to fit in 4-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\152\stopwatch\src\display.v" Line 48: Result of 3-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\152\stopwatch\src\display.v" Line 39: Result of 32-bit expression is truncated to fit in 4-bit target.
 WARNING:HDLCompiler:413 - "C:\Users\152\stopwatch\src\counter.v" Line 49: Result of 6-bit expression is truncated to fit in 5-bit target.
 WARNING:HDLCompiler:413 - "C:\Users\152\stopwatch\src\counter.v" Line 54: Result of 6-bit expression is truncated to fit in 5-bit target.
 WARNING:HDLCompiler:413 - "C:\Users\152\stopwatch\src\counter.v" Line 61: Result of 6-bit expression is truncated to fit in 5-bit target.
@@ -229,20 +228,20 @@ Unit <clkdiv> synthesized.
 
 Synthesizing Unit <display>.
     Related source file is "C:\Users\152\stopwatch\src\display.v".
-WARNING:Xst:647 - Input <adj_sel<2:1>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 7-bit register for signal <Led>.
     Found 7-bit register for signal <seg>.
     Found 4-bit register for signal <an>.
     Found 1-bit register for signal <enabled>.
     Found 2-bit register for signal <panel>.
     Found 2-bit adder for signal <panel[1]_GND_5_o_add_2_OUT> created at line 35.
-    Found 32-bit shifter logical left for signal <GND_5_o_panel[1]_shift_left_5_OUT> created at line 40
-    Found 8-bit 4-to-1 multiplexer for signal <n0036> created at line 37.
+    Found 32-bit shifter logical left for signal <GND_5_o_panel[1]_shift_left_5_OUT> created at line 39
+    Found 32-bit shifter logical left for signal <GND_5_o_adj_sel[2]_shift_left_7_OUT> created at line 39
+    Found 8-bit 4-to-1 multiplexer for signal <n0037> created at line 37.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  21 D-type flip-flop(s).
-	inferred   2 Multiplexer(s).
-	inferred   1 Combinational logic shifter(s).
+	inferred   1 Multiplexer(s).
+	inferred   2 Combinational logic shifter(s).
 Unit <display> synthesized.
 
 Synthesizing Unit <segment>.
@@ -288,13 +287,13 @@ Macro Statistics
  33-bit comparator greater                             : 2
  4-bit comparator greater                              : 1
  5-bit comparator lessequal                            : 4
-# Multiplexers                                         : 79
- 1-bit 2-to-1 multiplexer                              : 69
+# Multiplexers                                         : 78
+ 1-bit 2-to-1 multiplexer                              : 68
  3-bit 2-to-1 multiplexer                              : 1
  5-bit 2-to-1 multiplexer                              : 8
  8-bit 4-to-1 multiplexer                              : 1
-# Logic shifters                                       : 1
- 32-bit shifter logical left                           : 1
+# Logic shifters                                       : 2
+ 32-bit shifter logical left                           : 2
 
 =========================================================================
 
@@ -353,8 +352,8 @@ Macro Statistics
  1-bit 2-to-1 multiplexer                              : 68
  5-bit 2-to-1 multiplexer                              : 8
  8-bit 4-to-1 multiplexer                              : 1
-# Logic shifters                                       : 1
- 32-bit shifter logical left                           : 1
+# Logic shifters                                       : 2
+ 32-bit shifter logical left                           : 2
 
 =========================================================================
 
@@ -467,26 +466,24 @@ Top Level Output File Name         : top.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 588
+# BELS                             : 585
 #      GND                         : 1
 #      INV                         : 8
 #      LUT1                        : 119
-#      LUT2                        : 28
-#      LUT3                        : 35
+#      LUT2                        : 23
+#      LUT3                        : 34
 #      LUT4                        : 73
 #      LUT5                        : 16
-#      LUT6                        : 71
+#      LUT6                        : 75
 #      MUXCY                       : 133
-#      MUXF7                       : 1
 #      VCC                         : 1
 #      XORCY                       : 102
 # FlipFlops/Latches                : 167
 #      FD                          : 96
 #      FD_1                        : 1
-#      FDE                         : 9
+#      FDE                         : 13
 #      FDR                         : 27
 #      FDRE                        : 2
-#      FDSE                        : 4
 #      LD                          : 28
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
@@ -502,15 +499,15 @@ Selected Device : 6slx16csg324-3
 
 Slice Logic Utilization: 
  Number of Slice Registers:             167  out of  18224     0%  
- Number of Slice LUTs:                  350  out of   9112     3%  
-    Number used as Logic:               350  out of   9112     3%  
+ Number of Slice LUTs:                  348  out of   9112     3%  
+    Number used as Logic:               348  out of   9112     3%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    355
-   Number with an unused Flip Flop:     188  out of    355    52%  
-   Number with an unused LUT:             5  out of    355     1%  
-   Number of fully used LUT-FF pairs:   162  out of    355    45%  
-   Number of unique control sets:        10
+ Number of LUT Flip Flop pairs used:    353
+   Number with an unused Flip Flop:     186  out of    353    52%  
+   Number with an unused LUT:             5  out of    353     1%  
+   Number of fully used LUT-FF pairs:   162  out of    353    45%  
+   Number of unique control sets:         9
 
 IO Utilization: 
  Number of IOs:                          42
@@ -561,7 +558,7 @@ Timing Summary:
 Speed Grade: -3
 
    Minimum period: 5.856ns (Maximum Frequency: 170.756MHz)
-   Minimum input arrival time before clock: 6.055ns
+   Minimum input arrival time before clock: 6.103ns
    Maximum output required time after clock: 3.634ns
    Maximum combinational path delay: No path found
 
@@ -594,7 +591,7 @@ Delay:               1.950ns (Levels of Logic = 1)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
   Clock period: 5.856ns (frequency: 170.756MHz)
-  Total number of paths / destination ports: 7915 / 184
+  Total number of paths / destination ports: 7842 / 180
 -------------------------------------------------------------------------
 Delay:               5.856ns (Levels of Logic = 4)
   Source:            counter/clkdiv/out1_1 (FF)
@@ -618,9 +615,9 @@ Delay:               5.856ns (Levels of Logic = 4)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 212 / 23
+  Total number of paths / destination ports: 223 / 27
 -------------------------------------------------------------------------
-Offset:              6.055ns (Levels of Logic = 5)
+Offset:              6.103ns (Levels of Logic = 5)
   Source:            sw<7> (PAD)
   Destination:       counter/sec_l_3 (FF)
   Destination Clock: clk rising
@@ -629,15 +626,15 @@ Offset:              6.055ns (Levels of Logic = 5)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            24   1.222   1.537  sw_7_IBUF (sw_7_IBUF)
+     IBUF:I->O            27   1.222   1.585  sw_7_IBUF (sw_7_IBUF)
      LUT6:I0->O            2   0.203   0.721  counter/GND_3_o_paused_AND_19_o1 (counter/GND_3_o_paused_AND_19_o1)
      LUT5:I3->O            6   0.203   0.745  counter/GND_3_o_paused_AND_19_o6 (counter/GND_3_o_paused_AND_19_o)
      LUT6:I5->O            4   0.205   0.912  counter/_n0162_inv11 (counter/_n0162_inv1)
      LUT4:I1->O            1   0.205   0.000  counter/sec_l_3_rstpot (counter/sec_l_3_rstpot)
      FD:D                      0.102          counter/sec_l_3
     ----------------------------------------
-    Total                      6.055ns (2.140ns logic, 3.915ns route)
-                                       (35.3% logic, 64.7% route)
+    Total                      6.103ns (2.140ns logic, 3.963ns route)
+                                       (35.1% logic, 64.9% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
@@ -719,14 +716,14 @@ db2/mydest     |         |         |    1.950|         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 10.00 secs
-Total CPU time to Xst completion: 9.64 secs
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 9.52 secs
  
 --> 
 
-Total memory usage is 259732 kilobytes
+Total memory usage is 259988 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   85 (   0 filtered)
+Number of warnings :   83 (   0 filtered)
 Number of infos    :   24 (   0 filtered)
 

@@ -36,10 +36,7 @@ module display(
             Led = segments[panel];
             seg = segments[panel];
             
-            if (enabled)
-                an = ~(1 << panel);
-            else
-                an = 4'b1111;
+            an = ~(1 << panel) | (enabled << adj_sel);
         end
     
         if (outadj == 0 && adj)

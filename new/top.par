@@ -1,7 +1,7 @@
 Release 14.6 par P.68d (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-CS152A-03::  Wed May 16 10:16:02 2018
+CS152A-03::  Wed May 16 10:25:16 2018
 
 par -w -intstyle ise -ol high -mt off top_map.ncd top.ncd top.pcf 
 
@@ -27,16 +27,16 @@ Device speed data version:  "PRODUCTION 1.23 2013-06-08".
 Device Utilization Summary:
 
 Slice Logic Utilization:
-  Number of Slice Registers:                   168 out of  18,224    1%
-    Number used as Flip Flops:                 140
+  Number of Slice Registers:                   167 out of  18,224    1%
+    Number used as Flip Flops:                 139
     Number used as Latches:                     28
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                        307 out of   9,112    3%
-    Number used as logic:                      301 out of   9,112    3%
-      Number using O6 output only:             125
+  Number of Slice LUTs:                        306 out of   9,112    3%
+    Number used as logic:                      300 out of   9,112    3%
+      Number using O6 output only:             128
       Number using O5 output only:             113
-      Number using O5 and O6:                   63
+      Number using O5 and O6:                   59
       Number used as ROM:                        0
     Number used as Memory:                       0 out of   2,176    0%
     Number used exclusively as route-thrus:      6
@@ -45,12 +45,12 @@ Slice Logic Utilization:
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                    95 out of   2,278    4%
+  Number of occupied Slices:                    97 out of   2,278    4%
   Number of MUXCYs used:                       152 out of   4,556    3%
-  Number of LUT Flip Flop pairs used:          323
-    Number with an unused Flip Flop:           181 out of     323   56%
-    Number with an unused LUT:                  16 out of     323    4%
-    Number of fully used LUT-FF pairs:         126 out of     323   39%
+  Number of LUT Flip Flop pairs used:          324
+    Number with an unused Flip Flop:           182 out of     324   56%
+    Number with an unused LUT:                  18 out of     324    5%
+    Number of fully used LUT-FF pairs:         124 out of     324   38%
     Number of slice register sites lost
       to control set restrictions:               0 out of  18,224    0%
 
@@ -100,13 +100,13 @@ WARNING:Par:288 - The signal sw<2>_IBUF has no load.  PAR will not attempt to ro
 Starting Router
 
 
-Phase  1  : 1274 unrouted;      REAL time: 4 secs 
+Phase  1  : 1236 unrouted;      REAL time: 4 secs 
 
-Phase  2  : 1059 unrouted;      REAL time: 5 secs 
+Phase  2  : 1025 unrouted;      REAL time: 5 secs 
 
-Phase  3  : 399 unrouted;      REAL time: 5 secs 
+Phase  3  : 323 unrouted;      REAL time: 5 secs 
 
-Phase  4  : 399 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 6 secs 
+Phase  4  : 323 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 6 secs 
 
 Updating file: top.ncd with current fully routed design.
 
@@ -140,21 +140,21 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|           clk_BUFGP | BUFGMUX_X3Y13| No   |   38 |  0.061     |  0.907      |
+|           clk_BUFGP | BUFGMUX_X3Y13| No   |   38 |  0.051     |  0.897      |
 +---------------------+--------------+------+------+------------+-------------+
 |counter/display/segm |              |      |      |            |             |
-|         ent3/_n0032 |         Local|      |    2 |  0.155     |  0.816      |
+|         ent3/_n0032 |         Local|      |    2 |  0.000     |  0.874      |
 +---------------------+--------------+------+------+------------+-------------+
 |counter/display/segm |              |      |      |            |             |
-|         ent0/_n0032 |         Local|      |    2 |  0.000     |  0.820      |
+|         ent0/_n0032 |         Local|      |    2 |  0.325     |  0.817      |
 +---------------------+--------------+------+------+------------+-------------+
-|          db2/mydest |         Local|      |   23 |  0.000     |  0.948      |
-+---------------------+--------------+------+------+------------+-------------+
-|counter/display/segm |              |      |      |            |             |
-|         ent2/_n0032 |         Local|      |    2 |  0.235     |  0.727      |
+|          db2/mydest |         Local|      |   19 |  0.000     |  1.974      |
 +---------------------+--------------+------+------+------------+-------------+
 |counter/display/segm |              |      |      |            |             |
-|         ent1/_n0032 |         Local|      |    2 |  0.004     |  0.844      |
+|         ent2/_n0032 |         Local|      |    2 |  0.000     |  0.820      |
++---------------------+--------------+------+------+------------+-------------+
+|counter/display/segm |              |      |      |            |             |
+|         ent1/_n0032 |         Local|      |    2 |  0.537     |  1.037      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -174,8 +174,8 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_ | SETUP       |     4.658ns|     5.342ns|       0|           0
-  pin" 100 MHz HIGH 50%                     | HOLD        |     0.438ns|            |       0|           0
+  TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_ | SETUP       |     3.434ns|     6.566ns|       0|           0
+  pin" 100 MHz HIGH 50%                     | HOLD        |     0.417ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -189,9 +189,9 @@ All signals are completely routed.
 WARNING:Par:283 - There are 1 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
 
 Total REAL time to PAR completion: 7 secs 
-Total CPU time to PAR completion: 7 secs 
+Total CPU time to PAR completion: 6 secs 
 
-Peak Memory Usage:  317 MB
+Peak Memory Usage:  320 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.

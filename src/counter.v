@@ -24,7 +24,7 @@ module counter(
     reg [4:0] sec_l = 0;
     reg [4:0] sec_r = 0;
 
-	display display(clk, out7seg, outadj,
+	display display(clk, out7seg, outadj, adj_sel,
                     adj, seg, an, Led,
                     min_l, min_r, sec_l, sec_r);
      
@@ -66,9 +66,9 @@ module counter(
                 min_r = 0;
                 min_l = min_l + 1;
             end
-
-            // TODO: maybe implement tens overflow for minutes?
-            //       spec doesn't define behavior
+            
+            if (min_l >= 10)
+                min_l = 0;
         end
     end
 endmodule

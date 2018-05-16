@@ -2,6 +2,7 @@ module display(
     input clk,
     input [17:0] out7seg,
     input [25:0] outadj,
+    input [2:0] adj_sel,
     
     input adj, 
 	output reg [6:0] seg,
@@ -44,7 +45,7 @@ module display(
         if (outadj == 0 && adj)
             enabled = ~enabled;
         else if (!adj)
-            enabled = 1;
+            enabled = adj_sel;
     end
 endmodule
 

@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.68d on Wed May 16 10:05:16 2018
+// Written by: Map P.68d on Wed May 16 10:09:20 2018
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -90,10 +90,10 @@ TIMEGRP sys_clk_pin = BEL "db2/count_0" BEL "db2/count_16" BEL "db2/count_15"
         "counter/clkdiv/out7seg_14" BEL "counter/clkdiv/out7seg_13" BEL
         "counter/clkdiv/out7seg_12" BEL "counter/clkdiv/out7seg_11" BEL
         "counter/clkdiv/out7seg_10" BEL "counter/clkdiv/out7seg_9" BEL
-        "counter/clkdiv/out7seg_8" BEL "db2/mydest_1" BEL "counter/sec_r_3"
-        BEL "counter/sec_r_2" BEL "counter/sec_r_1" BEL "counter/sec_r_0" BEL
-        "counter/sec_l_3" BEL "counter/sec_l_2" BEL "counter/sec_l_1" BEL
-        "counter/sec_l_0" BEL "clk_BUFGP/BUFG";
+        "counter/clkdiv/out7seg_8" BEL "counter/sec_r_3" BEL "counter/sec_r_2"
+        BEL "counter/sec_r_1" BEL "counter/sec_r_0" BEL "counter/sec_l_3" BEL
+        "counter/sec_l_2" BEL "counter/sec_l_1" BEL "counter/sec_l_0" BEL
+        "clk_BUFGP/BUFG";
 TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
 SCHEMATIC END;
 

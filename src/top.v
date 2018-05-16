@@ -20,8 +20,12 @@ module top(
     wire       adj = sw[7];   // sets stopwatch to adjust mode
 
     // pause button
+    reg paused_toggle = 0;
+    always @(negedge btn_set_pause) begin
+        paused_toggle = ~paused_toggle;
+    end
     wire paused;
-    assign paused = (adj || btn_set_pause);
+    assign paused = (adj || paused_toggle);
 
     // adjust registers
     wire [2:0] adj_sel;

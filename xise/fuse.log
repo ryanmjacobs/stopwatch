@@ -1,0 +1,14 @@
+Running: C:\Xilinx\14.6\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Users/152/stopwatch/xise/top_tb_isim_beh.exe -prj C:/Users/152/stopwatch/xise/top_tb_beh.prj work.top_tb work.glbl 
+ISim P.68d (signature 0x7708f090)
+Number of CPUs detected in this system: 2
+Turning on mult-threading, number of parallel sub-compilation jobs: 4 
+Determining compilation order of HDL files
+Analyzing Verilog file "C:/Users/152/stopwatch/xise/../src/display.v" into library work
+Analyzing Verilog file "C:/Users/152/stopwatch/xise/../src/debounce.v" into library work
+Analyzing Verilog file "C:/Users/152/stopwatch/xise/../src/counter.v" into library work
+Analyzing Verilog file "C:/Users/152/stopwatch/xise/../src/top.v" into library work
+Analyzing Verilog file "C:/Users/152/stopwatch/xise/../src/tb/top_tb.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.6/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+ERROR:HDLCompiler:1654 - "C:/Users/152/stopwatch/xise/../src/top.v" Line 18: Instantiating <clkdiv> from unknown module <clkdiv>
+ERROR:Simulator:778 - Static elaboration of top level Verilog design unit(s) in library work failed

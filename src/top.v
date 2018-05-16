@@ -28,9 +28,7 @@ module top(
     reg [3:0] adj_val = 5;
     assign adj_sel = adj ? sel : 3'd5; // 5+ means void
 
-	wire rst;
-    assign rst = 0;
-    counter counter(clk, rst, paused,
+    counter counter(clk, btn_reset, paused,
                     adj, btn_set_pause, adj_sel, num,
 				    Led, seg, an);
 endmodule

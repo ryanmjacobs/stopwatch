@@ -45,7 +45,7 @@ module display(
         if (outadj == 0 && adj)
             enabled = ~enabled;
         else if (!adj)
-            enabled = adj_sel;
+            enabled = 1;
     end
 endmodule
 

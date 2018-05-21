@@ -7,7 +7,7 @@ module display_tb;
     clkdiv clkdiv(clk, btn_reset, out1, out2, out7seg, outadj);
 
     reg adj = 0;
-    reg [2:0] adj_sel = 0;
+    reg [2:0] adj_sel = 5;
 
 	wire [6:0] seg;
 	wire [3:0] an;
